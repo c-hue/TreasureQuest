@@ -9877,3 +9877,27 @@ Received Import Request.
 Start importing Assets/UI Tile/GroundPal.prefab using Guid(396b3bac6aa85444c95bf212cba5d021) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'aec02177663a4866c4545adf341a4ec6') in 0.015360792 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
+========================================================================
+Received Import Request.
+  Time since last request: 1716.879117 seconds.
+  path: Assets/Art/Tiles/IslandGroundRuleTile.asset
+  artifactKey: Guid(b5df2663b923a4650bb5ad1fa3f670c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tiles/IslandGroundRuleTile.asset using Guid(b5df2663b923a4650bb5ad1fa3f670c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'db20ea9c1339c58263756c5f137a91b4') in 0.170093458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.890729 seconds.
+  path: Assets/Art/Tiles/GroundPalette.prefab
+  artifactKey: Guid(b8d23213453664bf294be89c48b99d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tiles/GroundPalette.prefab using Guid(b8d23213453664bf294be89c48b99d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6b3c697c5268ba9a0891964e8751f8f2') in 0.20982675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 313
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.853027 seconds.
+  path: Assets/UI Tile/Ground.asset
+  artifactKey: Guid(1ab3505b50e7f4721bc58ee8976d593d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/UI Tile/Ground.asset using Guid(1ab3505b50e7f4721bc58ee8976d593d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '473352076d6cfe3d6265288d1d8e0802') in 0.073683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
