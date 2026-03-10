@@ -133,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terrain (32x32)_0
+      name: IslandGround_TopLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -155,7 +155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_1
+      name: IslandGround_TopMid
       rect:
         serializedVersion: 2
         x: 32
@@ -177,7 +177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_2
+      name: IslandGround_TopRight
       rect:
         serializedVersion: 2
         x: 64
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_3
+      name: IslandGround_PillarTop
       rect:
         serializedVersion: 2
         x: 128
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_11
+      name: IslandGround_MidLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -397,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_12
+      name: IslandGround_Middle
       rect:
         serializedVersion: 2
         x: 32
@@ -419,7 +419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_13
+      name: IslandGround_MidRight
       rect:
         serializedVersion: 2
         x: 64
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_14
+      name: IslandGround_PillarMid
       rect:
         serializedVersion: 2
         x: 128
@@ -639,7 +639,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_23
+      name: IslandGround_BotLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -661,7 +661,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_24
+      name: IslandGround_BotMid
       rect:
         serializedVersion: 2
         x: 32
@@ -683,11 +683,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_25
+      name: IslandGround_BotRight
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 66
         width: 32
         height: 32
       alignment: 0
@@ -705,10 +705,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_26
+      name: IslandGround_PillarMi
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 64
         width: 32
         height: 32
@@ -903,7 +903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_35
+      name: IslandGround_PlatLeft
       rect:
         serializedVersion: 2
         x: 0
@@ -925,11 +925,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_36
+      name: IslandGround_PlatMid
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -947,7 +947,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_37
+      name: IslandGround_PlatRight
       rect:
         serializedVersion: 2
         x: 64
@@ -969,7 +969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (32x32)_38
+      name: IslandGround_Single
       rect:
         serializedVersion: 2
         x: 128
@@ -1182,39 +1182,40 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Terrain (32x32)_0: -2113894134886356154
-      Terrain (32x32)_1: -9114847578740223409
+      IslandGround_BotLeft: -1506315406
+      IslandGround_BotMid: -1122666729
+      IslandGround_BotRight: -1374564343
+      IslandGround_MidLeft: 9048098576551171047
+      IslandGround_MidRight: -373365149
+      IslandGround_Middle: -1358590402
+      IslandGround_PillarMi: -892721240
+      IslandGround_PillarMid: 1064516800
+      IslandGround_PillarTop: 8516645164251878092
+      IslandGround_PlatLeft: 2123936569
+      IslandGround_PlatMid: 1169200474
+      IslandGround_PlatRight: -347121486
+      IslandGround_Single: -601796050
+      IslandGround_TopLeft: -2113894134886356154
+      IslandGround_TopMid: -9114847578740223409
+      IslandGround_TopRight: 4239696434956193796
       Terrain (32x32)_10: 8103538333889938161
-      Terrain (32x32)_11: 9048098576551171047
-      Terrain (32x32)_12: -1358590402
-      Terrain (32x32)_13: -373365149
-      Terrain (32x32)_14: 1064516800
       Terrain (32x32)_15: -516362868
       Terrain (32x32)_16: 1890643634
       Terrain (32x32)_17: -723797024
       Terrain (32x32)_18: -943210018
       Terrain (32x32)_19: -212120409
-      Terrain (32x32)_2: 4239696434956193796
       Terrain (32x32)_20: -1021651544
       Terrain (32x32)_21: -1540081350
       Terrain (32x32)_22: 63600440
-      Terrain (32x32)_23: -1506315406
-      Terrain (32x32)_24: -1122666729
-      Terrain (32x32)_25: -1374564343
-      Terrain (32x32)_26: -892721240
       Terrain (32x32)_27: -131087655
       Terrain (32x32)_28: 51521459
       Terrain (32x32)_29: -1533962340
-      Terrain (32x32)_3: 8516645164251878092
       Terrain (32x32)_30: -1895456749
       Terrain (32x32)_31: -462094551
       Terrain (32x32)_32: -1841456652
       Terrain (32x32)_33: 308098744
       Terrain (32x32)_34: -777765726
-      Terrain (32x32)_35: 2123936569
-      Terrain (32x32)_36: 1169200474
       Terrain (32x32)_37: -347121486
-      Terrain (32x32)_38: -601796050
       Terrain (32x32)_39: -1006928019
       Terrain (32x32)_4: 3709395470188729914
       Terrain (32x32)_40: 1269713580
