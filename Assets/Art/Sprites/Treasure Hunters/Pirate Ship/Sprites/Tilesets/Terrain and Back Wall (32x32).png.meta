@@ -169,7 +169,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_0
+      name: Pirate-TL
       rect:
         serializedVersion: 2
         x: 32
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_1
+      name: Pirate-TM
       rect:
         serializedVersion: 2
         x: 64
@@ -213,7 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_2
+      name: Pirate-TR
       rect:
         serializedVersion: 2
         x: 96
@@ -235,7 +235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_3
+      name: Pirate-Pillartop
       rect:
         serializedVersion: 2
         x: 160
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_11
+      name: Pirate-ML
       rect:
         serializedVersion: 2
         x: 32
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_12
+      name: Pirate-MM
       rect:
         serializedVersion: 2
         x: 64
@@ -455,7 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_13
+      name: Pirate-MR
       rect:
         serializedVersion: 2
         x: 96
@@ -477,7 +477,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_14
+      name: Pirate-PillarMid
       rect:
         serializedVersion: 2
         x: 160
@@ -675,7 +675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_23
+      name: Pirate-BL
       rect:
         serializedVersion: 2
         x: 32
@@ -697,7 +697,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_24
+      name: Pirate-BM
       rect:
         serializedVersion: 2
         x: 64
@@ -719,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_25
+      name: Pirate-BR
       rect:
         serializedVersion: 2
         x: 96
@@ -741,7 +741,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_26
+      name: Pirate-PillarBot
       rect:
         serializedVersion: 2
         x: 160
@@ -939,7 +939,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_35
+      name: Pirate-PlatLeft
       rect:
         serializedVersion: 2
         x: 32
@@ -961,7 +961,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_36
+      name: Pirate-PlatMid
       rect:
         serializedVersion: 2
         x: 64
@@ -983,7 +983,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_37
+      name: Pirate-PlatRight
       rect:
         serializedVersion: 2
         x: 96
@@ -1005,7 +1005,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain and Back Wall (32x32)_38
+      name: Pirate-Single
       rect:
         serializedVersion: 2
         x: 160
@@ -2252,39 +2252,39 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Terrain and Back Wall (32x32)_0: 4477086192492801621
-      Terrain and Back Wall (32x32)_1: -5938990893411276722
+      Pirate-BL: -7223658455709132073
+      Pirate-BM: 1912472143
+      Pirate-BR: -340479066
+      Pirate-ML: 6765171035964416714
+      Pirate-MM: 5610378790130853670
+      Pirate-MR: 3042669338922827695
+      Pirate-PillarBot: -1013406362
+      Pirate-PillarMid: -3142740237376536647
+      Pirate-Pillartop: 1241317255884180220
+      Pirate-PlatLeft: -1056872428
+      Pirate-PlatMid: 1573712178
+      Pirate-PlatRight: -454706817
+      Pirate-Single: -392353657
+      Pirate-TL: 4477086192492801621
+      Pirate-TM: -5938990893411276722
+      Pirate-TR: 1083716660666615185
       Terrain and Back Wall (32x32)_10: 6765596381666369160
-      Terrain and Back Wall (32x32)_11: 6765171035964416714
-      Terrain and Back Wall (32x32)_12: 5610378790130853670
-      Terrain and Back Wall (32x32)_13: 3042669338922827695
-      Terrain and Back Wall (32x32)_14: -3142740237376536647
       Terrain and Back Wall (32x32)_15: 849497089450251925
       Terrain and Back Wall (32x32)_16: -4427699483111241990
       Terrain and Back Wall (32x32)_17: 4165897324084861168
       Terrain and Back Wall (32x32)_18: 5214611256287391803
       Terrain and Back Wall (32x32)_19: -589631309973711658
-      Terrain and Back Wall (32x32)_2: 1083716660666615185
       Terrain and Back Wall (32x32)_20: 8819438893310010655
       Terrain and Back Wall (32x32)_21: 5697696572159324438
       Terrain and Back Wall (32x32)_22: -7422343565055380290
-      Terrain and Back Wall (32x32)_23: -7223658455709132073
-      Terrain and Back Wall (32x32)_24: 1912472143
-      Terrain and Back Wall (32x32)_25: -340479066
-      Terrain and Back Wall (32x32)_26: -1013406362
       Terrain and Back Wall (32x32)_27: 1484484430
       Terrain and Back Wall (32x32)_28: -1422456781
       Terrain and Back Wall (32x32)_29: 951077122
-      Terrain and Back Wall (32x32)_3: 1241317255884180220
       Terrain and Back Wall (32x32)_30: -1554554610
       Terrain and Back Wall (32x32)_31: 1693874870
       Terrain and Back Wall (32x32)_32: -1716694953
       Terrain and Back Wall (32x32)_33: -1532555556
       Terrain and Back Wall (32x32)_34: -1627026091
-      Terrain and Back Wall (32x32)_35: -1056872428
-      Terrain and Back Wall (32x32)_36: 1573712178
-      Terrain and Back Wall (32x32)_37: -454706817
-      Terrain and Back Wall (32x32)_38: -392353657
       Terrain and Back Wall (32x32)_39: -1271244051
       Terrain and Back Wall (32x32)_4: 228710401271303929
       Terrain and Back Wall (32x32)_40: -347258355
