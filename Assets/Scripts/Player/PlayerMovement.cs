@@ -5,8 +5,13 @@ public class PlayerMovement : MonoBehaviour
 {
     // --- Serialize Fields ---------------------------------------------------------------
     [Header("Movement")]
-    [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float moveSpeed = 6f;
     [SerializeField] float jumpForce = 18f;
+
+    [Header("Water Movement")]
+    [SerializeField] float waterGravity = 0.2f;
+    [SerializeField] float waterDrag = 10f;
+    [SerializeField] float waterSpeed = 4f;
 
     [Header("Ground Check")]
     [SerializeField] Transform groundCheck;
@@ -15,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Feel")]
     [SerializeField] float fallMultiplier = 2.5f;
-    [SerializeField] float lowJumpMultiplier = 2f;
+    [SerializeField] float lowJumpMultiplier = 1f;
 
 
     // --- Private Variables ---------------------------------------------------------------
@@ -23,9 +28,12 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    bool isGrounded;
-    bool isAlive = true;
-    float horizontalInput;
+    private float gravityScale;
+    private float linearDrag;
+    private bool isGrounded;
+    private bool inWater;
+    private bool isAlive = true;
+    private float horizontalInput;
 
 
     // --- Lifecycle ---------------------------------------------------------------
@@ -34,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();   
+
+        gravityScale = rb.gravityScale;
+        linearDrag = rb.linearDamping;
     }
 
     // Update is called once per frame
@@ -42,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isAlive) return;
 
         ReadInput();
-        CheckGrounded();   
+        CheckGrounded();  
         HandleJump();
         FlipSprite();
         UpdateAnimator();
@@ -69,13 +80,35 @@ public class PlayerMovement : MonoBehaviour
     // --- Movement ---------------------------------------------------------------
     void Move()
     {
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        float currentSpeed = inWater ? waterSpeed : moveSpeed;
+        rb.linearVelocity = new Vector2(horizontalInput * currentSpeed, rb.linearVelocity.y);
     }
 
     // --- Ground Check ---------------------------------------------------------------
     void CheckGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    // --- Water Movement -----------------------------------------------------------------
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Water"))
+        {
+            inWater = true;
+            rb.gravityScale = waterGravity;
+            rb.linearDamping = waterDrag;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Water"))
+        {
+            inWater = false;
+            rb.gravityScale = gravityScale;
+            rb.linearDamping = linearDrag;
+        }
     }
 
     // --- Jump ---------------------------------------------------------------
@@ -89,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ApplyBetterJumpPhysics()
     {
+        if (inWater) return;
         if (rb.linearVelocity.y < 0)
         {
             // Falling — apply extra gravity
