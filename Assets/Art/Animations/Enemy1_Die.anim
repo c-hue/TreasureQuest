@@ -22,12 +22,20 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -4557066030158747658, guid: 0fac13ff4633e4ff78424b94ec3f2664, type: 3}
-    - time: 0.11666667
+    - time: 0.15
       value: {fileID: -5987725052110043666, guid: 99bef50be3485452b96df9d936029867, type: 3}
-    - time: 0.21666667
+    - time: 0.28333333
       value: {fileID: -1400186207069440473, guid: 83cf9927a23f342aa85a469e5fd91a6c, type: 3}
-    - time: 0.33333334
+    - time: 0.43333334
       value: {fileID: -5067500508053964420, guid: 2ef4c1ad8952b46b081cd0446f653a8f, type: 3}
+    - time: 0.56666666
+      value: {fileID: 3892838150563630428, guid: f30f93e06251f4d48ac390ed3387be60, type: 3}
+    - time: 0.7
+      value: {fileID: 6610420773212145959, guid: fccd25ec8ecef4ed5949f29ebeb2c61b, type: 3}
+    - time: 0.8666667
+      value: {fileID: -3580108318400642874, guid: 098ed9f592e4f4064b3ff3272aa5161e, type: 3}
+    - time: 1
+      value: {fileID: -180116984242975545, guid: d9242f802f03b44e89b0528bbf979cfc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,12 +62,16 @@ AnimationClip:
     - {fileID: -5987725052110043666, guid: 99bef50be3485452b96df9d936029867, type: 3}
     - {fileID: -1400186207069440473, guid: 83cf9927a23f342aa85a469e5fd91a6c, type: 3}
     - {fileID: -5067500508053964420, guid: 2ef4c1ad8952b46b081cd0446f653a8f, type: 3}
+    - {fileID: 3892838150563630428, guid: f30f93e06251f4d48ac390ed3387be60, type: 3}
+    - {fileID: 6610420773212145959, guid: fccd25ec8ecef4ed5949f29ebeb2c61b, type: 3}
+    - {fileID: -3580108318400642874, guid: 098ed9f592e4f4064b3ff3272aa5161e, type: 3}
+    - {fileID: -180116984242975545, guid: d9242f802f03b44e89b0528bbf979cfc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 1.1333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,4 +90,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: ApplyKnockback
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1333333
+    functionName: DestroyObject
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

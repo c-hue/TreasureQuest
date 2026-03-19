@@ -13,11 +13,9 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] float detectRadius = 0.2f;
     [SerializeField] LayerMask groundLayer;
 
-    [Header("Death Knockback")]
-    [SerializeField] float deathKickX = 1f;
-    [SerializeField] float deathKickY = 1f;
-    [SerializeField] float destroyDelay = 0.8f;
-
+    [Header("Knockback")]
+    [SerializeField] float kickX = 3f;
+    [SerializeField] float kickY = 2f;
 
     // ─── State ───────────────────────────────────────────────────────────
     Rigidbody2D rb;
@@ -26,6 +24,8 @@ public class EnemyPatrol : MonoBehaviour
     int enemyHealth = 3;
     bool movingRight = true;
     bool isAlive = true;
+    bool isHurt = false;
+    float hitDirection;
 
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
@@ -37,13 +37,13 @@ public class EnemyPatrol : MonoBehaviour
 
     void Update()
     {
-        if (!isAlive) return;
+        if (!isAlive || isHurt) return;
         CheckEdges();
     }
 
     void FixedUpdate()
     {
-        if (!isAlive) return;
+        if (!isAlive || isHurt) return;
         Patrol();
     }
 
@@ -77,20 +77,38 @@ public class EnemyPatrol : MonoBehaviour
 
     public void Hit(float hitDir)
     {
+        if (!isAlive) return;
+        hitDirection = hitDir;
+
         if (enemyHealth > 1)
         {
             enemyHealth--;
+            isHurt = true;
+            rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("hit");
         } else
         {
             isAlive = false;
             rb.linearVelocity = Vector2.zero;
-            rb.gravityScale = 0f;
-            float knockDir = transform.position.x < hitDir ? -1f :1f;
-            rb.AddForce(new Vector2(knockDir * deathKickX, deathKickY), ForceMode2D.Impulse);
-            GetComponent<Collider2D>().enabled = false;
+
             animator.SetTrigger("die");
-            Destroy(gameObject, 0.8f);
         }
+    }
+    
+    public void ApplyKnockback()
+    {
+        float knockDir = transform.position.x < hitDirection ? -1f : 1f;
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(new Vector2(knockDir * kickX, kickY), ForceMode2D.Impulse);
+    }
+
+    public void EndHit()
+    {
+        isHurt = false;
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

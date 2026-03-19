@@ -10,30 +10,29 @@ public class PlayerShooter : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     float nextFireTime;
+    Animator animator;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame && Time.time >= nextFireTime)
         {
-            Shoot();
+            animator.SetTrigger("shoot");
             nextFireTime = Time.time + fireRate;
         }
     }
 
-    void Shoot()
+    public void throwSword()
     {
         // Determine direction based on which way the player is facing
         float direction = spriteRenderer.flipX ? -1f : 1f;
 
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.identity);
         arrow.GetComponent<Arrow>().SetDirection(direction);
-
-        // Optional: play shoot animation
-        //GetComponent<Animator>()?.SetTrigger("shoot");
     }
 }
