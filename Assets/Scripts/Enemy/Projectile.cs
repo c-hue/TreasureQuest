@@ -22,7 +22,6 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Ground"))
         {
-            Debug.Log("Hit: ");
             animator.SetTrigger("Hit");
             speed = 0f;
         }
@@ -31,6 +30,5 @@ public class Projectile : MonoBehaviour
     public void DestroyObject()
     {
         Destroy(gameObject);
-        speed = 6f;
     }
 }
