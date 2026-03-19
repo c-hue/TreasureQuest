@@ -8,15 +8,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Canvas
   - Water
   - UI
-  - Canvas
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - Hazard
+  - PlayerProjectile
+  - EnemyProjectile
   - 
   - 
   - 
