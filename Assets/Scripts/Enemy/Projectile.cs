@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] float direction = 1f;
 
     private Animator animator;
+    private int damageAmount = 1;
 
     void Start()
     {
@@ -20,7 +21,16 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Ground"))
+        if (collision.CompareTag("Player"))
+        {
+            animator.SetTrigger("Hit");
+            speed = 0f;
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+                playerHealth.TakeDamage(damageAmount);
+        }
+
+        if (collision.CompareTag("Ground"))
         {
             animator.SetTrigger("Hit");
             speed = 0f;
