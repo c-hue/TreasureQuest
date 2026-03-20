@@ -51,9 +51,13 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy/EnemyPatrol.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets/Scripts/Core/GameSession.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
+    <Compile Include="Assets/Scripts/Combat/Hazard.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
+    <Compile Include="Assets/Scripts/Core/LevelExit.cs" />
+    <Compile Include="Assets/Scripts/Core/AudioManager.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
@@ -67,11 +71,13 @@
     <Compile Include="Assets/Scripts/Enemy/EnemyHurt.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
+    <Compile Include="Assets/Scripts/Core/PauseMenu.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
+    <Compile Include="Assets/Scripts/Enemy/ShooterEnemy.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Scripts/Combat/Sword.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
@@ -82,10 +88,12 @@
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Scripts/Core/StartMenu.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerHealth.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/Core/CameraShake.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Scripts/Enemy/Projectile.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
@@ -1473,6 +1481,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FMODUnityEditor.csproj" />
+    <ProjectReference Include="FMODUnityHaptics.csproj" />
+    <ProjectReference Include="FMODUnity.csproj" />
+    <ProjectReference Include="FMODUnityResonance.csproj" />
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
