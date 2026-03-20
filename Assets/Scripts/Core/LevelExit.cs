@@ -7,6 +7,7 @@ public class LevelExit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("next level");
             StartCoroutine(LoadNextLevel());
         }
     }
