@@ -50,13 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Enemy/EnemyPatrol.cs" />
+    <Compile Include="Assets/Scripts/Core/Level3Exit.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/Scripts/Core/GameSession.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/Combat/Hazard.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
-    <Compile Include="Assets/Scripts/Core/LevelExit.cs" />
     <Compile Include="Assets/Scripts/Core/AudioManager.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
@@ -70,6 +70,7 @@
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyHurt.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
+    <Compile Include="Assets/Scripts/Core/Level2Exit.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/Scripts/Core/PauseMenu.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
+    <Compile Include="Assets/Scripts/Core/Level1Exit.cs" />
     <Compile Include="Assets/Scripts/Core/StartMenu.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerHealth.cs" />

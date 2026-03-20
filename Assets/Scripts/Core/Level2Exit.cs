@@ -1,5 +1,5 @@
 using UnityEngine;
-public class LevelExit : MonoBehaviour
+public class Level2Exit : MonoBehaviour
 {
     [SerializeField] float exitDelay = 1f;
 
