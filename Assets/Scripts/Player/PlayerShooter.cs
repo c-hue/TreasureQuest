@@ -20,6 +20,7 @@ public class PlayerShooter : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
         if (Mouse.current.leftButton.wasPressedThisFrame && Time.time >= nextFireTime)
         {
             animator.SetTrigger("shoot");

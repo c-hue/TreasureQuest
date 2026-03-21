@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class EndGameUI : MonoBehaviour
 {
+    [SerializeField] GameObject popupPanel;
+
     [SerializeField] TextMeshProUGUI leftText;
     [SerializeField] TextMeshProUGUI rightText;
-    [SerializeField] GameObject popupPanel;
+
+    [SerializeField] Button playButton;
+    [SerializeField] Button resumeButton;
 
     private bool gameEnded = false;
 
@@ -20,7 +25,10 @@ public class EndGameUI : MonoBehaviour
        popupPanel.SetActive(true); 
        leftText.text = "Game";
        rightText.text = "Over";
-       PauseGame();
+        Time.timeScale = 0f;
+
+        resumeButton.gameObject.SetActive(false);
+        playButton.gameObject.SetActive(true);
     }
 
     public void ShowWin()
@@ -31,12 +39,21 @@ public class EndGameUI : MonoBehaviour
        popupPanel.SetActive(true); 
        leftText.text = "You";
        rightText.text = "Win!";
-       PauseGame();
+       Time.timeScale = 0f;
+
+        resumeButton.gameObject.SetActive(false);
+        playButton.gameObject.SetActive(true);
     }
 
-    public void PauseGame()
+    public void ShowPause()
     {
+        popupPanel.SetActive(true);
+        leftText.text = "Game";
+        rightText.text = "Pause";
         Time.timeScale = 0f;
+
+        resumeButton.gameObject.SetActive(true);
+        playButton.gameObject.SetActive(false);
     }
 
     // --- Menu Options ---------------------------------------------
@@ -50,6 +67,12 @@ public class EndGameUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Level1");
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        popupPanel.SetActive(false);
     }
 
     public void QuitGame()

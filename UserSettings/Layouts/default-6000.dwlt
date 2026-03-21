@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 86
-    y: 501
+    y: 137
     width: 950
     height: 759
   m_ShowMode: 0
@@ -451,8 +451,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Sprite Editor\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 47
-    y: 127
+    x: 0
+    y: 26
     width: 550
     height: 552
   m_SerializedDataModeController:
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Zoom: 14.135294
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 046dffa603e811af0800000000000000
+  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
 --- !u!114 &19
 MonoBehaviour:
@@ -552,8 +552,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Animation\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 86
-    y: 501
+    x: 0
+    y: 26
     width: 950
     height: 733
   m_SerializedDataModeController:
@@ -593,8 +593,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "UnityEditor.MainToolbarWindow\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 586
-    y: 74
+    x: 0
+    y: 0
     width: 875
     height: 36
   m_SerializedDataModeController:
@@ -962,8 +962,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 586
-    y: 110
+    x: 0
+    y: 24
     width: 168.5
     height: 474
   m_SerializedDataModeController:
@@ -1111,8 +1111,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 755.5
-    y: 110
+    x: 170.5
+    y: 24
     width: 358.5
     height: 474
   m_SerializedDataModeController:
@@ -1889,8 +1889,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 586
-    y: 610
+    x: 0
+    y: 524
     width: 529
     height: 232
   m_SerializedDataModeController:
@@ -1941,42 +1941,41 @@ MonoBehaviour:
       m_Data: 54854
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54480
-    - m_Data: 54484
-    - m_Data: 54486
-    - m_Data: 54488
-    - m_Data: 54490
-    - m_Data: 54494
-    - m_Data: 54500
-    - m_Data: 54504
-    - m_Data: 54506
-    - m_Data: 54508
-    - m_Data: 54510
-    - m_Data: 54512
-    - m_Data: 54514
-    - m_Data: 54516
-    - m_Data: 54518
-    - m_Data: 54520
-    - m_Data: 54522
-    - m_Data: 54524
-    - m_Data: 54526
-    - m_Data: 54844
-    - m_Data: 54848
-    - m_Data: 55412
-    - m_Data: 55414
-    - m_Data: 55418
-    - m_Data: 55420
-    - m_Data: 55422
-    - m_Data: 55428
-    - m_Data: 55434
-    - m_Data: 55436
-    - m_Data: 56784
-    - m_Data: 56788
-    - m_Data: 68312
-    - m_Data: 68352
-    - m_Data: 70120
-    - m_Data: 71010
-    - m_Data: 1000000000
+    - m_Data: 56028
+    - m_Data: 56030
+    - m_Data: 56032
+    - m_Data: 56034
+    - m_Data: 56036
+    - m_Data: 56038
+    - m_Data: 56040
+    - m_Data: 56042
+    - m_Data: 56044
+    - m_Data: 56046
+    - m_Data: 56048
+    - m_Data: 56050
+    - m_Data: 56052
+    - m_Data: 56054
+    - m_Data: 56056
+    - m_Data: 56058
+    - m_Data: 56060
+    - m_Data: 56062
+    - m_Data: 56064
+    - m_Data: 56066
+    - m_Data: 56068
+    - m_Data: 56070
+    - m_Data: 56072
+    - m_Data: 56074
+    - m_Data: 56076
+    - m_Data: 56078
+    - m_Data: 56080
+    - m_Data: 56082
+    - m_Data: 56084
+    - m_Data: 56086
+    - m_Data: 56088
+    - m_Data: 56090
+    - m_Data: 56092
+    - m_Data: 56094
+    - m_Data: 56096
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2009,42 +2008,41 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 54480
-    - m_Data: 54484
-    - m_Data: 54486
-    - m_Data: 54488
-    - m_Data: 54490
-    - m_Data: 54494
-    - m_Data: 54500
-    - m_Data: 54504
-    - m_Data: 54506
-    - m_Data: 54508
-    - m_Data: 54510
-    - m_Data: 54512
-    - m_Data: 54514
-    - m_Data: 54516
-    - m_Data: 54518
-    - m_Data: 54520
-    - m_Data: 54522
-    - m_Data: 54524
-    - m_Data: 54526
-    - m_Data: 54844
-    - m_Data: 54848
-    - m_Data: 55412
-    - m_Data: 55414
-    - m_Data: 55418
-    - m_Data: 55420
-    - m_Data: 55422
-    - m_Data: 55428
-    - m_Data: 55434
-    - m_Data: 55436
-    - m_Data: 56784
-    - m_Data: 56788
-    - m_Data: 68312
-    - m_Data: 68352
-    - m_Data: 70120
-    - m_Data: 71010
-    - m_Data: 1000000000
+    - m_Data: 56028
+    - m_Data: 56030
+    - m_Data: 56032
+    - m_Data: 56034
+    - m_Data: 56036
+    - m_Data: 56038
+    - m_Data: 56040
+    - m_Data: 56042
+    - m_Data: 56044
+    - m_Data: 56046
+    - m_Data: 56048
+    - m_Data: 56050
+    - m_Data: 56052
+    - m_Data: 56054
+    - m_Data: 56056
+    - m_Data: 56058
+    - m_Data: 56060
+    - m_Data: 56062
+    - m_Data: 56064
+    - m_Data: 56066
+    - m_Data: 56068
+    - m_Data: 56070
+    - m_Data: 56072
+    - m_Data: 56074
+    - m_Data: 56076
+    - m_Data: 56078
+    - m_Data: 56080
+    - m_Data: 56082
+    - m_Data: 56084
+    - m_Data: 56086
+    - m_Data: 56088
+    - m_Data: 56090
+    - m_Data: 56092
+    - m_Data: 56094
+    - m_Data: 56096
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2213,8 +2211,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1116
-    y: 110
+    x: 531
+    y: 24
     width: 344
     height: 732
   m_SerializedDataModeController:
