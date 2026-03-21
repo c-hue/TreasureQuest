@@ -1,9 +1,9 @@
 # ✅ TileMania — Student Progress Checklist
 ## CS 4700: Game Design Studio | Unity 6 + C#
 
-**Name:** _______________________________  
+**Name:** Jade Nguyen and Caitlyn Hue  
 **Date Started:** _______________________  
-**Date Submitted:** _____________________
+**Date Submitted:** 3/20/26
 
 ---
 
@@ -18,12 +18,12 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Created Unity 6 project with **2D URP** template |
-| ☐ | ☐ | Installed **Cinemachine** package |
-| ☐ | ☐ | Installed **2D Tilemap Extras** (for Rule Tiles) |
-| ☐ | ☐ | Created folder structure: Art/, Scripts/, Prefabs/, Audio/, Scenes/ |
-| ☐ | ☐ | Imported or created placeholder sprites |
-| ☐ | ☐ | Configured sprites: Filter Mode = Point, PPU = 16 |
+| ✅ | ☐ | Created Unity 6 project with **2D URP** template |
+| ✅ | ☐ | Installed **Cinemachine** package |
+| ✅ | ☐ | Installed **2D Tilemap Extras** (for Rule Tiles) |
+| ✅ | ☐ | Created folder structure: Art/, Scripts/, Prefabs/, Audio/, Scenes/ |
+| ✅ | ☐ | Imported or created placeholder sprites |
+| ✅ | ☐ | Configured sprites: Filter Mode = Point, PPU = 16 |
 
 **Section Notes:** _______________________________________________
 
@@ -33,14 +33,14 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Created `Grid` with at least 3 Tilemap children (Ground, Hazards, Background) |
-| ☐ | ☐ | Created a **Rule Tile** for the ground |
-| ☐ | ☐ | Added at least 5 rules to the Rule Tile (edges, corners, center) |
-| ☐ | ☐ | Painted a level with platforms, gaps, and elevation changes |
-| ☐ | ☐ | Added **Tilemap Collider 2D** to Ground |
-| ☐ | ☐ | Added **Composite Collider 2D** and enabled "Used By Composite" |
-| ☐ | ☐ | Hazard Tilemap has collider with **Is Trigger: true** |
-| ☐ | ☐ | Background Tilemap has Order in Layer = -1 |
+| ✅ | ☐ | Created `Grid` with at least 3 Tilemap children (Ground, Hazards, Background) |
+| ✅ | ☐ | Created a **Rule Tile** for the ground |
+| ✅ | ☐ | Added at least 5 rules to the Rule Tile (edges, corners, center) |
+| ✅ | ☐ | Painted a level with platforms, gaps, and elevation changes |
+| ✅ | ☐ | Added **Tilemap Collider 2D** to Ground |
+| ✅ | ☐ | Added **Composite Collider 2D** and enabled "Used By Composite" |
+| ✅ | ☐ | Hazard Tilemap has collider with **Is Trigger: true** |
+| ✅ | ☐ | Background Tilemap has Order in Layer = -1 |
 
 **Section Notes:** _______________________________________________
 
@@ -50,14 +50,14 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Player has: SpriteRenderer, Rigidbody2D, CapsuleCollider2D, Animator |
-| ☐ | ☐ | Rigidbody2D: Collision Detection = Continuous, Freeze Rotation Z = true |
-| ☐ | ☐ | `PlayerMovement.cs` attached and compiles without errors |
-| ☐ | ☐ | `GroundCheck` child object created at bottom of player |
-| ☐ | ☐ | Player moves left/right with A/D or arrow keys |
-| ☐ | ☐ | Player jumps with Space and only when grounded |
-| ☐ | ☐ | Sprite flips direction when moving |
-| ☐ | ☐ | Better jump physics applied (fall feels snappy, tap = short jump) |
+| ✅ | ☐ | Player has: SpriteRenderer, Rigidbody2D, CapsuleCollider2D, Animator |
+| ✅ | ☐ | Rigidbody2D: Collision Detection = Continuous, Freeze Rotation Z = true |
+| ✅ | ☐ | `PlayerMovement.cs` attached and compiles without errors |
+| ✅ | ☐ | `GroundCheck` child object created at bottom of player |
+| ✅ | ☐ | Player moves left/right with A/D or arrow keys |
+| ✅ | ☐ | Player jumps with Space and only when grounded |
+| ✅ | ☐ | Sprite flips direction when moving |
+| ✅ | ☐ | Better jump physics applied (fall feels snappy, tap = short jump) |
 
 **Section Notes:** _______________________________________________
 
@@ -67,15 +67,15 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | `Player_Idle` animation clip created |
-| ☐ | ☐ | `Player_Run` animation clip created |
-| ☐ | ☐ | `Player_Jump` animation clip created |
-| ☐ | ☐ | `Player_Fall` animation clip created |
-| ☐ | ☐ | `Player_Death` animation clip created |
-| ☐ | ☐ | Animator parameters set: `isRunning`, `isGrounded`, `yVelocity`, `die` |
-| ☐ | ☐ | All transitions wired correctly (no floating states) |
-| ☐ | ☐ | "Has Exit Time" unchecked on all movement transitions |
-| ☐ | ☐ | Animations play correctly in Play Mode |
+| ✅ | ☐ | `Player_Idle` animation clip created |
+| ✅ | ☐ | `Player_Run` animation clip created |
+| ✅ | ☐ | `Player_Jump` animation clip created |
+| ✅ | ☐ | `Player_Fall` animation clip created |
+| ✅ | ☐ | `Player_Death` animation clip created |
+| ✅ | ☐ | Animator parameters set: `isRunning`, `isGrounded`, `yVelocity`, `die` |
+| ✅ | ☐ | All transitions wired correctly (no floating states) |
+| ✅ | ☐ | "Has Exit Time" unchecked on all movement transitions |
+| ✅ | ☐ | Animations play correctly in Play Mode |
 
 **Section Notes:** _______________________________________________
 
@@ -85,9 +85,9 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Cinemachine Virtual Camera added to scene |
-| ☐ | ☐ | Camera follows player smoothly |
-| ☐ | ☐ | Camera confined to level bounds (CinemachineConfiner2D) |
+| ✅ | ☐ | Cinemachine Virtual Camera added to scene |
+| ✅ | ☐ | Camera follows player smoothly |
+| ✅ | ☐ | Camera confined to level bounds (CinemachineConfiner2D) |
 | ☐ | ☐ | Camera shake implemented in `CameraShake.cs` |
 | ☐ | ☐ | Camera shakes when player takes damage |
 
@@ -99,11 +99,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Created layers: Ground, Player, Enemy, Hazard, PlayerProjectile, EnemyProjectile |
-| ☐ | ☐ | Ground Tilemap assigned to Ground layer |
-| ☐ | ☐ | Player assigned to Player layer |
-| ☐ | ☐ | Layer Collision Matrix configured (PlayerProjectile ✗ Player, Enemy ✗ Enemy) |
-| ☐ | ☐ | PlayerMovement Ground Check uses correct layer mask |
+| ✅ | ☐ | Created layers: Ground, Player, Enemy, Hazard, PlayerProjectile, EnemyProjectile |
+| ✅ | ☐ | Ground Tilemap assigned to Ground layer |
+| ✅ | ☐ | Player assigned to Player layer |
+| ✅ | ☐ | Layer Collision Matrix configured (PlayerProjectile ✗ Player, Enemy ✗ Enemy) |
+| ✅ | ☐ | PlayerMovement Ground Check uses correct layer mask |
 
 **Section Notes:** _______________________________________________
 
@@ -113,61 +113,61 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Enemy prefab created with Rigidbody2D, CapsuleCollider2D, Animator |
-| ☐ | ☐ | Enemy assigned to Enemy layer |
-| ☐ | ☐ | `EnemyPatrol.cs` attached, enemy moves left and right |
-| ☐ | ☐ | Enemy turns at waypoint boundaries |
-| ☐ | ☐ | Enemy turns at ledges (no ground detected) |
-| ☐ | ☐ | Enemy sprite flips direction correctly |
-| ☐ | ☐ | `EnemyHurt.cs` — touching enemy damages player |
-| ☐ | ☐ | Enemy `Die()` plays animation and removes GameObject |
-| ☐ | ☐ | At least **2 enemies** placed in the level |
+| ✅ | ☐ | Enemy prefab created with Rigidbody2D, CapsuleCollider2D, Animator |
+| ✅ | ☐ | Enemy assigned to Enemy layer |
+| ✅ | ☐ | `EnemyPatrol.cs` attached, enemy moves left and right |
+| ✅ | ☐ | Enemy turns at waypoint boundaries |
+| ✅ | ☐ | Enemy turns at ledges (no ground detected) |
+| ✅ | ☐ | Enemy sprite flips direction correctly |
+| ✅ | ☐ | `EnemyHurt.cs` — touching enemy damages player |
+| ✅ | ☐ | Enemy `Die()` plays animation and removes GameObject |
+| ✅ | ☐ | At least **2 enemies** placed in the level |
 
 **Section Notes:** _______________________________________________
-
+Working to add two enemies that jump in levels 2 and 3
 ---
 
 ## 🏹 Section 8 — Shooting System
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Arrow prefab created with Rigidbody2D (gravity 0), BoxCollider2D (trigger) |
-| ☐ | ☐ | Arrow assigned to PlayerProjectile layer |
-| ☐ | ☐ | `Arrow.cs` moves in correct direction |
-| ☐ | ☐ | Arrow destroys on hitting an enemy |
-| ☐ | ☐ | Arrow destroys on hitting ground |
-| ☐ | ☐ | Arrow has max lifetime (auto-destroys after 3s) |
-| ☐ | ☐ | `PlayerShooter.cs` fires on left-click (Fire1) |
-| ☐ | ☐ | Fire rate limit prevents spam |
-| ☐ | ☐ | Arrows fire in the direction the player faces |
-| ☐ | ☐ | `FirePoint` child object positioned correctly |
+| ✅ | ☐ | Arrow prefab created with Rigidbody2D (gravity 0), BoxCollider2D (trigger) |
+| ✅ | ☐ | Arrow assigned to PlayerProjectile layer |
+| ✅ | ☐ | `Arrow.cs` moves in correct direction |
+| ✅ | ☐ | Arrow destroys on hitting an enemy |
+| ✅ | ☐ | Arrow destroys on hitting ground |
+| ✅ | ☐ | Arrow has max lifetime (auto-destroys after 3s) |
+| ✅ | ☐ | `PlayerShooter.cs` fires on left-click (Fire1) |
+| ✅ | ☐ | Fire rate limit prevents spam |
+| ✅ | ☐ | Arrows fire in the direction the player faces |
+| ✅ | ☐ | `FirePoint` child object positioned correctly |
 
 **Section Notes:** _______________________________________________
-
+Instead of an arrow, we have throwing a sword instead
 ---
 
 ## ❤️ Section 9 — Health & Damage
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | `PlayerHealth.cs` tracks current / max health |
-| ☐ | ☐ | UI hearts update when player takes damage |
-| ☐ | ☐ | Invincibility frames work after taking damage (flashing effect) |
-| ☐ | ☐ | Player death triggers game over flow |
-| ☐ | ☐ | `GameSession.cs` singleton persists across scenes |
-| ☐ | ☐ | Lives system: death decrements lives, reloads scene |
+| ✅ | ☐ | `PlayerHealth.cs` tracks current / max health |
+| ✅ | ☐ | UI hearts update when player takes damage |
+| ✅ | ☐ | Invincibility frames work after taking damage (flashing effect) |
+| ✅ | ☐ | Player death triggers game over flow |
+| ✅ | ☐ | `GameSession.cs` singleton persists across scenes |
+| ✅ | ☐ | Lives system: death decrements lives, reloads scene |
 | ☐ | ☐ | Out of lives → loads Game Over scene |
-| ☐ | ☐ | Hazard tiles damage/kill player on touch |
+| ✅ | ☐ | Hazard tiles damage/kill player on touch |
 
 **Section Notes:** _______________________________________________
-
+Instead of hearts, we did a health bar
 ---
 
 ## 🎬 Section 10 — Scenes & Game States
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Build Settings has all scenes in correct order |
+| ✅ | ☐ | Build Settings has all scenes in correct order |
 | ☐ | ☐ | Main Menu scene with Start button works |
 | ☐ | ☐ | Game Over scene exists and loads correctly |
 | ☐ | ☐ | Level Exit triggers next level load |
@@ -196,21 +196,21 @@
 ### Technical Quality
 | ✅ | Standard |
 |:---:|---|
-| ☐ | No null reference errors in Console during normal play |
-| ☐ | All scripts organized in correct subfolders |
-| ☐ | All tweakable values use `[SerializeField]` — no magic numbers |
+| ✅ | No null reference errors in Console during normal play |
+| ✅ | All scripts organized in correct subfolders |
+| ✅ | All tweakable values use `[SerializeField]` — no magic numbers |
 | ☐ | Enemies are **prefabs** (not unique scene objects) |
-| ☐ | Arrow is a **prefab** |
-| ☐ | GameObjects are named clearly in Hierarchy |
-| ☐ | Unused GameObjects/scripts removed |
+| ✅ | Arrow is a **prefab** |
+| ✅ | GameObjects are named clearly in Hierarchy |
+| ✅ | Unused GameObjects/scripts removed |
 
 ### Design Quality
 | ✅ | Standard |
 |:---:|---|
-| ☐ | Level has a clear start and end |
-| ☐ | Level has varied terrain (high platforms, low areas, gaps) |
-| ☐ | Difficulty ramps up through the level |
-| ☐ | Player can distinguish hazards from safe ground visually |
+| ✅ | Level has a clear start and end |
+| ✅ | Level has varied terrain (high platforms, low areas, gaps) |
+| ✅ | Difficulty ramps up through the level |
+| ✅ | Player can distinguish hazards from safe ground visually |
 | ☐ | Game is playable start to finish without bugs |
 
 ---
@@ -239,12 +239,12 @@
 
 | ✅ | Task |
 |:---:|---|
-| ☐ | Project builds without errors (File → Build Settings → Build And Run) |
+| ✅ | Project builds without errors (File → Build Settings → Build And Run) |
 | ☐ | Game is playable from Main Menu to Game Over/Win |
-| ☐ | Submitted GitHub repository link on Canvas |
+| ✅ | Submitted GitHub repository link on Canvas |
 | ☐ | Repository is **public** or instructor has been given access |
-| ☐ | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
-| ☐ | Completed **Reflection Questions** (below) |
+| ✅ | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
+| ✅ | Completed **Reflection Questions** (below) |
 
 ---
 
@@ -253,29 +253,27 @@
 Answer these in **2–4 sentences each**. These are the same questions you'll revisit across all four projects — track how your thinking evolves!
 
 **1. What was your rapid prototype goal for this project?**
-
+We wanted to make sure the levels and game were playable and somewhat matches the sketches we made at the beginning. 
 _______________________________________________________________
 _______________________________________________________________
 
 **2. How closely did your final game match your original prototype vision? What changed and why?**
-
+It matched pretty closely to what we wanted. Due to time we did have to cut down a few things. Like I wanted to do enemy attacks, but we weren't able to implement it.
 _______________________________________________________________
 _______________________________________________________________
 
 **3. What is the most technically challenging thing you implemented? How did you solve it?**
-
-_______________________________________________________________
-_______________________________________________________________
+Jade: The most techincally challenging thing I implemented was making the enemies. For awhile I was having a hard time having it go back and forth in the game. But I was able to figure out the positioning was wrong for the edges.
+Caitlyn: 
 
 **4. If you had one more week, what would you add or change?**
-
+We would add more animations to different parts of the game to make it look nicer. And maybe make more levels or make them harder.
 _______________________________________________________________
 _______________________________________________________________
 
 **5. How does your approach to game development now compare to when you started the course?**
-
-_______________________________________________________________
-_______________________________________________________________
+Jade: My approach to game development is still kind of the same we work on sketching out what we want. And then build the map and then start implementing parts of the level that need code.
+Caitlyn:
 
 ---
 
