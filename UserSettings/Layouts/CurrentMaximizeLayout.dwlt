@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99274
+  controlID: 100870
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 99275
+  controlID: 100871
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 99276
+  controlID: 100872
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -249,10 +249,13 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -356086
+      - m_Data: 114622
       m_LastClickedID:
-        m_Data: -356086
+        m_Data: 114622
       m_ExpandedIDs:
+      - m_Data: -368060
+      - m_Data: -368018
+      - m_Data: -366248
       - m_Data: -355808
       - m_Data: -355258
       - m_Data: -348132
@@ -297,6 +300,8 @@ MonoBehaviour:
       - m_Data: 95222
       - m_Data: 103270
       - m_Data: 103648
+      - m_Data: 112318
+      - m_Data: 114116
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -864,9 +869,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 21.565529, y: 5.159516, z: 6.625505}
+    m_Target: {x: -3.4233074, y: -11.78837, z: 6.625505}
     speed: 2
-    m_Value: {x: 21.565529, y: 5.159516, z: 6.625505}
+    m_Value: {x: -3.4233074, y: -11.78837, z: 6.625505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -997,6 +1002,7 @@ MonoBehaviour:
     - {fileID: -974375316074152759, guid: 8213148bcf73b4a68b84c735afcef3d4, type: 2}
     - {fileID: -638706617786793786, guid: 15efd07eb1c1d400781f6c0e99cb8c27, type: 2}
     - {fileID: 4165392889910218436, guid: 78cdae8a2c472456dadf1980d0cb9173, type: 2}
+    - {fileID: -6277928775990352358, guid: c35c5abb893214f02817f6550c3a7a88, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.5633661
       e01: 0
@@ -1078,10 +1084,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 0ebca25ff4c4546d78a31a40d3899ecc, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: c35c5abb893214f02817f6550c3a7a88, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1505952344083485302, guid: 0ebca25ff4c4546d78a31a40d3899ecc, type: 2}
+  - m_Target: {fileID: -6277928775990352358, guid: c35c5abb893214f02817f6550c3a7a88, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1170,8 +1192,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Sprites/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown
-      Nose/Captain Clown Nose without Sword/07-Dead Hit
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1181,28 +1202,25 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Art/Sprites/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown
-    Nose/Captain Clown Nose without Sword/07-Dead Hit
+  - Assets/Scenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: /Users/cdhue/Documents/TileMania
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 188}
+    scrollPos: {x: 0, y: 178.00134}
     m_SelectedIDs:
-    - m_Data: 106836
+    - m_Data: 54854
     m_LastClickedID:
-      m_Data: 106836
+      m_Data: 54854
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 54480
     - m_Data: 54482
-    - m_Data: 54484
     - m_Data: 54486
     - m_Data: 54488
     - m_Data: 54490
-    - m_Data: 54492
     - m_Data: 54494
     - m_Data: 54500
     - m_Data: 54504
@@ -1215,7 +1233,6 @@ MonoBehaviour:
     - m_Data: 54522
     - m_Data: 54524
     - m_Data: 54526
-    - m_Data: 54844
     - m_Data: 54848
     - m_Data: 55412
     - m_Data: 55414
@@ -1322,9 +1339,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -356086
-    m_LastClickedInstanceID: -356086
-    m_HadKeyboardFocusLastEvent: 0
+    - m_Data: 114622
+    m_LastClickedInstanceID: 114622
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 51552
     - m_Data: 51650
@@ -1401,7 +1418,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 86}
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 232
@@ -1514,7 +1531,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 231
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

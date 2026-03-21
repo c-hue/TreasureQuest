@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Feel")]
     [SerializeField] float fallMultiplier = 2.5f;
-    [SerializeField] float lowJumpMultiplier = 1f;
+    [SerializeField] float lowJumpMultiplier = 2f;
 
 
     // --- Private Variables ---------------------------------------------------------------

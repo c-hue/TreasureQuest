@@ -77334,7 +77334,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   fallMultiplier: 2.5
-  lowJumpMultiplier: 1
+  lowJumpMultiplier: 2.5
 --- !u!4 &1415157219
 Transform:
   m_ObjectHideFlags: 0
