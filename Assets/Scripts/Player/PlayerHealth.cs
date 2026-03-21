@@ -79,10 +79,9 @@ public class PlayerHealth : MonoBehaviour
             Instantiate(deathParticles, transform.position, Quaternion.identity);
         
         movement.onDeath();
-        Invoke(nameof(GameOver), 1f);  // Wait for death animation
     }
 
-    void GameOver()
+    public void GameOver()
     {
         FindFirstObjectByType<GameSession>()?.ProcessPlayerDeath();
     }

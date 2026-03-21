@@ -159,6 +159,5 @@ public class PlayerMovement : MonoBehaviour
         isAlive = false;
         animator.SetTrigger("die");
         rb.linearVelocity = Vector2.zero;
-        GetComponent<Collider2D>().enabled = false;
     }
 }
