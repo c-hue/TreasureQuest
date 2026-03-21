@@ -2,7 +2,7 @@
 ## CS 4700: Game Design Studio | Unity 6 + C#
 
 **Name:** Jade Nguyen and Caitlyn Hue  
-**Date Started:** _______________________  
+**Date Started:** 3/06/26  
 **Date Submitted:** 3/20/26
 
 ---
@@ -88,8 +88,8 @@
 | ✅ | ☐ | Cinemachine Virtual Camera added to scene |
 | ✅ | ☐ | Camera follows player smoothly |
 | ✅ | ☐ | Camera confined to level bounds (CinemachineConfiner2D) |
-| ☐ | ☐ | Camera shake implemented in `CameraShake.cs` |
-| ☐ | ☐ | Camera shakes when player takes damage |
+| ✅ | ☐ | Camera shake implemented in `CameraShake.cs` |
+| ✅ | ☐ | Camera shakes when player takes damage |
 
 **Section Notes:** _______________________________________________
 
@@ -156,7 +156,7 @@ Instead of an arrow, we have throwing a sword instead
 | ✅ | ☐ | Player death triggers game over flow |
 | ✅ | ☐ | `GameSession.cs` singleton persists across scenes |
 | ✅ | ☐ | Lives system: death decrements lives, reloads scene |
-| ☐ | ☐ | Out of lives → loads Game Over scene |
+| ✅ | ☐ | Out of lives → loads Game Over scene |
 | ✅ | ☐ | Hazard tiles damage/kill player on touch |
 
 **Section Notes:** _______________________________________________
@@ -168,10 +168,10 @@ Instead of hearts, we did a health bar
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
 | ✅ | ☐ | Build Settings has all scenes in correct order |
-| ☐ | ☐ | Main Menu scene with Start button works |
-| ☐ | ☐ | Game Over scene exists and loads correctly |
-| ☐ | ☐ | Level Exit triggers next level load |
-| ☐ | ☐ | Win scene or win condition implemented |
+| ✅ | ☐ | Main Menu scene with Start button works |
+| ✅ | ☐ | Game Over scene exists and loads correctly |
+| ✅ | ☐ | Level Exit triggers next level load |
+| ✅ | ☐ | Win scene or win condition implemented |
 
 **Section Notes:** _______________________________________________
 
@@ -230,8 +230,8 @@ Instead of hearts, we did a health bar
 | ☐ | 🔴 | Multiple levels (3+) with scene transitions |
 | ☐ | 🔴 | Save system (high score persists between sessions) |
 
-**Extension chosen:** _______________________________________  
-**Brief description of what you added:** _______________________________________
+**Extension chosen:** Animated collectible coins/gems and score system 
+**Brief description of what you added:** We have not added these yet since we ran out of time, but we are planning to add collectible coins/gems and potions to increase score and heal the player. The score will be visible on the player's screen.
 
 ---
 
@@ -240,9 +240,9 @@ Instead of hearts, we did a health bar
 | ✅ | Task |
 |:---:|---|
 | ✅ | Project builds without errors (File → Build Settings → Build And Run) |
-| ☐ | Game is playable from Main Menu to Game Over/Win |
+| ✅ | Game is playable from Main Menu to Game Over/Win |
 | ✅ | Submitted GitHub repository link on Canvas |
-| ☐ | Repository is **public** or instructor has been given access |
+| ✅ | Repository is **public** or instructor has been given access |
 | ✅ | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
 | ✅ | Completed **Reflection Questions** (below) |
 
@@ -253,27 +253,22 @@ Instead of hearts, we did a health bar
 Answer these in **2–4 sentences each**. These are the same questions you'll revisit across all four projects — track how your thinking evolves!
 
 **1. What was your rapid prototype goal for this project?**
-We wanted to make sure the levels and game were playable and somewhat matches the sketches we made at the beginning. 
-_______________________________________________________________
-_______________________________________________________________
+We wanted to make sure the levels and game were playable and somewhat matches the sketches we made at the beginning. We also made sure that we did multiple iterations with a lot of testing so that we can adapt to new requirements and changes/suggestions
+
 
 **2. How closely did your final game match your original prototype vision? What changed and why?**
-It matched pretty closely to what we wanted. Due to time we did have to cut down a few things. Like I wanted to do enemy attacks, but we weren't able to implement it.
-_______________________________________________________________
-_______________________________________________________________
+It matched pretty closely to what we wanted. Due to time we did have to cut down a few things. Like I wanted to do enemy attacks, but we weren't able to implement it. We also planned for the player to have two different types of attacks (close and ranged), but could not get to that.
 
 **3. What is the most technically challenging thing you implemented? How did you solve it?**
-Jade: The most techincally challenging thing I implemented was making the enemies. For awhile I was having a hard time having it go back and forth in the game. But I was able to figure out the positioning was wrong for the edges.
-Caitlyn: 
+Jade: The most techincally challenging thing I implemented was making the enemies. For awhile I was having a hard time having it go back and forth in the game. But I was able to figure out the positioning was wrong for the edges. | 
+Caitlyn: The most technically challenging thing I implemented were animations because it was my first time doing it and I kept having trouble lining up the sprites and making it look smooth. I solved it by going directly into the Sprite Editor to fix positions of the sprites.
 
 **4. If you had one more week, what would you add or change?**
-We would add more animations to different parts of the game to make it look nicer. And maybe make more levels or make them harder.
-_______________________________________________________________
-_______________________________________________________________
+We would add more animations to different parts of the game to make it look nicer. And maybe make more levels or make them harder. We would also implement sound effects, player melee attack, a pause menu, collectibles, and an adaptive score system.
 
 **5. How does your approach to game development now compare to when you started the course?**
-Jade: My approach to game development is still kind of the same we work on sketching out what we want. And then build the map and then start implementing parts of the level that need code.
-Caitlyn:
+Jade: My approach to game development is still kind of the same we work on sketching out what we want. And then build the map and then start implementing parts of the level that need code. | 
+Caitlyn: My approach to game development has stayed relatively similar, where I would first brainstorm using the GDD and design the layout of our maps before actually implementing them in Unity. The only thing that really changed was that I use less tutorials when getting started with the game, but I still find videos and research when I have to implement a new feature.
 
 ---
 
