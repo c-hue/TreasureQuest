@@ -49,16 +49,16 @@ public class GameSession : MonoBehaviour
 
     void LoadGameOver()
     {
-        Destroy(gameObject);  // Reset session
-        SceneManager.LoadScene("GameOver");
+        FindFirstObjectByType<EndGameUI>().ShowLose();
     }
 
     public void LoadNextLevel()
     {
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log(nextIndex);
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(nextIndex);
         else
-            SceneManager.LoadScene("Win");
+            FindFirstObjectByType<EndGameUI>().ShowWin();
     }
 }
