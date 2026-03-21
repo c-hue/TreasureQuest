@@ -77,7 +77,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (deathParticles != null)
             Instantiate(deathParticles, transform.position, Quaternion.identity);
-
+        
         movement.onDeath();
         Invoke(nameof(GameOver), 1f);  // Wait for death animation
     }
