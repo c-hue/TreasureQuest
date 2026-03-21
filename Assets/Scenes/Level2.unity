@@ -30895,7 +30895,7 @@ MonoBehaviour:
   projectile: {fileID: 6861172169538906040, guid: 8525084ebd4cf494b8655566863dd709, type: 3}
   projectilePos: {fileID: 815494650}
   shootInterval: 3
-  detectionRange: 20
+  detectionRange: 30
 --- !u!70 &550271960
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -33135,6 +33135,8 @@ GameObject:
   - component: {fileID: 1244718041}
   - component: {fileID: 1244718040}
   - component: {fileID: 1244718039}
+  - component: {fileID: 1244718044}
+  - component: {fileID: 1244718043}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -33252,6 +33254,35 @@ Transform:
   - {fileID: 1136308238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1244718043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244718038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBasicMultiChannelPerlin
+  NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 0
+  FrequencyGain: 0
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &1244718044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244718038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beeb44f316fbf4724a93592c6efe2a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
 --- !u!1 &1296799504
 GameObject:
   m_ObjectHideFlags: 0

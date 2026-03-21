@@ -5,15 +5,13 @@ public class CameraShake : MonoBehaviour
 {
     public static CameraShake Instance {get; private set; }
 
-    CinemachineCamera vcam;
     CinemachineBasicMultiChannelPerlin noise;
     float shakeTimer;
 
     void Awake()
     {
         Instance = this;
-        vcam = GetComponent<CinemachineCamera>();
-        noise = vcam.GetComponent<CinemachineBasicMultiChannelPerlin>();
+        noise = GetComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     // Update is called once per frame
