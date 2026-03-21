@@ -199,7 +199,7 @@ Instead of hearts, we did a health bar
 | ✅ | No null reference errors in Console during normal play |
 | ✅ | All scripts organized in correct subfolders |
 | ✅ | All tweakable values use `[SerializeField]` — no magic numbers |
-| ☐ | Enemies are **prefabs** (not unique scene objects) |
+| ✅ | Enemies are **prefabs** (not unique scene objects) |
 | ✅ | Arrow is a **prefab** |
 | ✅ | GameObjects are named clearly in Hierarchy |
 | ✅ | Unused GameObjects/scripts removed |
@@ -211,7 +211,7 @@ Instead of hearts, we did a health bar
 | ✅ | Level has varied terrain (high platforms, low areas, gaps) |
 | ✅ | Difficulty ramps up through the level |
 | ✅ | Player can distinguish hazards from safe ground visually |
-| ☐ | Game is playable start to finish without bugs |
+| ✅ | Game is playable start to finish without bugs |
 
 ---
 
