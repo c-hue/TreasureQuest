@@ -75220,7 +75220,7 @@ GameObject:
   - component: {fileID: 793809497}
   - component: {fileID: 793809499}
   - component: {fileID: 793809500}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Hazards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76397,7 +76397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920930975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77190,7 +77190,7 @@ GameObject:
   - component: {fileID: 1415157214}
   - component: {fileID: 1415157220}
   - component: {fileID: 1415157221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -79072,7 +79072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724300133}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
