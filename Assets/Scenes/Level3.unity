@@ -4440,7 +4440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258089103}
   m_Layer: 0
-  m_Name: LevelExit
+  m_Name: FinishPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23346,6 +23346,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1107055719}
   - {fileID: 1859119921}
+  - {fileID: 258089103}
   - {fileID: 2023238910}
   - {fileID: 541574984}
   - {fileID: 187755372}
@@ -23354,5 +23355,4 @@ SceneRoots:
   - {fileID: 15053369}
   - {fileID: 2030305088}
   - {fileID: 1065151208}
-  - {fileID: 258089103}
   - {fileID: 8309040324805500255}
