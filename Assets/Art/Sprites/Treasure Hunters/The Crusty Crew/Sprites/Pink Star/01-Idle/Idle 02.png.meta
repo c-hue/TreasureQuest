@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -103,12 +103,12 @@ TextureImporter:
       name: Idle 02_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
+        x: 2
+        y: 1
         width: 29
-        height: 26
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b488d789a8c904f1d9a0fc02720d491e
     internalID: 0
     vertices: []
     indices: 

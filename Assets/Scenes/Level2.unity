@@ -32211,7 +32211,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2403993053922000566, guid: 9aee790e98e154f8db696b309525aeb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -34032,7 +34032,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -41595,6 +41595,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2772358521222655127, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4953378370120091015, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.62848
