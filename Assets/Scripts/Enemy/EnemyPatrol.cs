@@ -91,7 +91,6 @@ public class EnemyPatrol : MonoBehaviour
         {
             isAlive = false;
             rb.linearVelocity = Vector2.zero;
-
             animator.SetTrigger("die");
         }
     }

@@ -40,6 +40,15 @@ public class Arrow : MonoBehaviour
             return;
         }
 
+        EnemyJump enemyJump = other.GetComponent<EnemyJump>();
+        if (enemyJump != null)
+        {
+            enemyJump.Hit();
+            CameraShake.Instance?.Shake(1f, 0.15f);
+            Destroy(gameObject);
+            return;
+        }
+
         // Hit ground/wall
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {

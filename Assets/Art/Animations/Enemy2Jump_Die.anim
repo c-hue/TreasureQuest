@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy3_Die
+  m_Name: Enemy2Jump_Die
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,21 +21,21 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -4557066030158747658, guid: a584fbb445aa9424eb0fdc8522b4e5d0, type: 3}
+      value: {fileID: -4557066030158747658, guid: b4671208d70364219849f1652319357f, type: 3}
     - time: 0.15
-      value: {fileID: -5987725052110043666, guid: eb26573b28fb94821947e27da7c4cbeb, type: 3}
+      value: {fileID: -5987725052110043666, guid: 14b303affc4fc4a5ab23509aff40ba1a, type: 3}
     - time: 0.28333333
-      value: {fileID: -1400186207069440473, guid: 0aac751317d3c4ce5a66f18a623bf396, type: 3}
+      value: {fileID: -1400186207069440473, guid: 78765cfeb18d94065b110b7aec286985, type: 3}
     - time: 0.43333334
-      value: {fileID: -5067500508053964420, guid: 65adb90eb6da5450aa8f4f947bf5b47c, type: 3}
+      value: {fileID: -5067500508053964420, guid: 1341ec5ad60414d8cba568c8287ef24e, type: 3}
     - time: 0.56666666
-      value: {fileID: 3892838150563630428, guid: 82aa9191b03df4a80855c04c550e877f, type: 3}
+      value: {fileID: 3892838150563630428, guid: 9ade30d9ef1d341548d74ae1bb6696d7, type: 3}
     - time: 0.71666664
-      value: {fileID: 6610420773212145959, guid: 6938d876df3b84691a1d36b04df3ba03, type: 3}
+      value: {fileID: 6610420773212145959, guid: f4fdd683b2daa4b669a57032b2774468, type: 3}
     - time: 0.85
-      value: {fileID: -3580108318400642874, guid: 7a8601e78ea784f4e8e9864664fca437, type: 3}
+      value: {fileID: -3580108318400642874, guid: 326f56bff31a5408180eb70b35f7f8bc, type: 3}
     - time: 1
-      value: {fileID: -180116984242975545, guid: 1b516ece639604f0b9bd2ac09068ca2c, type: 3}
+      value: {fileID: -180116984242975545, guid: f562e73482f454b8b83762bdb9eb26be, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -58,14 +58,14 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -4557066030158747658, guid: a584fbb445aa9424eb0fdc8522b4e5d0, type: 3}
-    - {fileID: -5987725052110043666, guid: eb26573b28fb94821947e27da7c4cbeb, type: 3}
-    - {fileID: -1400186207069440473, guid: 0aac751317d3c4ce5a66f18a623bf396, type: 3}
-    - {fileID: -5067500508053964420, guid: 65adb90eb6da5450aa8f4f947bf5b47c, type: 3}
-    - {fileID: 3892838150563630428, guid: 82aa9191b03df4a80855c04c550e877f, type: 3}
-    - {fileID: 6610420773212145959, guid: 6938d876df3b84691a1d36b04df3ba03, type: 3}
-    - {fileID: -3580108318400642874, guid: 7a8601e78ea784f4e8e9864664fca437, type: 3}
-    - {fileID: -180116984242975545, guid: 1b516ece639604f0b9bd2ac09068ca2c, type: 3}
+    - {fileID: -4557066030158747658, guid: b4671208d70364219849f1652319357f, type: 3}
+    - {fileID: -5987725052110043666, guid: 14b303affc4fc4a5ab23509aff40ba1a, type: 3}
+    - {fileID: -1400186207069440473, guid: 78765cfeb18d94065b110b7aec286985, type: 3}
+    - {fileID: -5067500508053964420, guid: 1341ec5ad60414d8cba568c8287ef24e, type: 3}
+    - {fileID: 3892838150563630428, guid: 9ade30d9ef1d341548d74ae1bb6696d7, type: 3}
+    - {fileID: 6610420773212145959, guid: f4fdd683b2daa4b669a57032b2774468, type: 3}
+    - {fileID: -3580108318400642874, guid: 326f56bff31a5408180eb70b35f7f8bc, type: 3}
+    - {fileID: -180116984242975545, guid: f562e73482f454b8b83762bdb9eb26be, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -91,13 +91,6 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
-    functionName: ApplyKnockback
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 1.15
     functionName: DestroyObject
     data: 

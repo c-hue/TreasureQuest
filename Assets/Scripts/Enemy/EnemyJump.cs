@@ -6,13 +6,9 @@ public class EnemyJump : MonoBehaviour
 {
     // ─── Settings ────────────────────────────────────────────────────────
     [Header("Patrol")]
-    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] float moveSpeed = 6f;
     [SerializeField] Transform topEdge;
     [SerializeField] Transform bottomEdge;  
-
-    [Header("Knockback")]
-    [SerializeField] float kickX = 3f;
-    [SerializeField] float kickY = 2f;
 
     // ─── State ───────────────────────────────────────────────────────────
     Rigidbody2D rb;
@@ -51,7 +47,14 @@ public class EnemyJump : MonoBehaviour
     void Patrol()
     {
         float direction = movingUp ? 1f : -1f;
-        rb.linearVelocity = new Vector2(0, direction * moveSpeed);    
+        if (movingUp)
+        {
+            rb.linearVelocity = new Vector2(0, direction * moveSpeed);    
+
+        } else
+        {
+            rb.linearVelocity = new Vector2(0, direction * 5f);    
+        }
     }
 
     void CheckEdges()
@@ -94,10 +97,9 @@ public class EnemyJump : MonoBehaviour
 
     // ─── Death ───────────────────────────────────────────────────────────
 
-    public void Hit(float hitDir)
+    public void Hit()
     {
         if (!isAlive) return;
-        hitDirection = hitDir;
 
         if (enemyHealth > 1)
         {
@@ -109,16 +111,8 @@ public class EnemyJump : MonoBehaviour
         {
             isAlive = false;
             rb.linearVelocity = Vector2.zero;
-
             animator.SetTrigger("die");
         }
-    }
-    
-    public void ApplyKnockback()
-    {
-        float knockDir = transform.position.x < hitDirection ? -1f : 1f;
-        rb.linearVelocity = Vector2.zero;
-        rb.AddForce(new Vector2(knockDir * kickX, kickY), ForceMode2D.Impulse);
     }
 
     public void EndHit()
