@@ -5,10 +5,12 @@ public class Level2Exit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (GameSession.Instance?.keyFound == true)
         {
-            Debug.Log("next level");
-            StartCoroutine(LoadNextLevel());
+            if (other.CompareTag("Player"))
+            {
+                StartCoroutine(LoadNextLevel());
+            }
         }
     }
 

@@ -94,6 +94,7 @@
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerHealth.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets/Scripts/Core/Collectible.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/Core/CameraShake.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />

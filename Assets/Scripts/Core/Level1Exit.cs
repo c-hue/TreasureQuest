@@ -5,11 +5,14 @@ public class Level1Exit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (GameSession.Instance?.mapFound == true)
         {
-            Debug.Log("next level");
-            StartCoroutine(LoadNextLevel());
+            if (other.CompareTag("Player"))
+            {
+                StartCoroutine(LoadNextLevel());
+            }
         }
+        
     }
 
     System.Collections.IEnumerator LoadNextLevel()

@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float groundCheckRadius = 0.15f;
     [SerializeField] LayerMask groundLayer;
 
+    [Header("Hazard Check")]
+    [SerializeField] LayerMask hazardLayer;
+
     [Header("Jump Feel")]
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 2f;
@@ -31,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private float gravityScale;
     private float linearDrag;
     private bool isGrounded;
+    private bool isOnHazard;
     private bool inWater;
     private bool isAlive = true;
     private float horizontalInput;
@@ -54,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         ReadInput();
         CheckGrounded();  
+        CheckHazard();
         HandleJump();
         FlipSprite();
         UpdateAnimator();
@@ -90,6 +95,12 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
+    // --- Hazard Check ---------------------------------------------------------------
+    void CheckHazard()
+    {
+        isOnHazard = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, hazardLayer);
+    }
+
     // --- Water Movement -----------------------------------------------------------------
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -114,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     // --- Jump ---------------------------------------------------------------
     void HandleJump()
     {
-        if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) && isGrounded)
+        if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) && (isGrounded || isOnHazard))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
