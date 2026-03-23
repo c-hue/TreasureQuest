@@ -1,17 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
-public class EnemyPatrol : MonoBehaviour
+
+public class EnemyJump : MonoBehaviour
 {
     // ─── Settings ────────────────────────────────────────────────────────
     [Header("Patrol")]
     [SerializeField] float moveSpeed = 3f;
-    [SerializeField] Transform leftEdge;
-    [SerializeField] Transform rightEdge;
-
-    [Header("Ground/Wall Detection")]
-    [SerializeField] Transform groundDetect;
-    [SerializeField] float detectRadius = 0.2f;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform topEdge;
+    [SerializeField] Transform bottomEdge;  
 
     [Header("Knockback")]
     [SerializeField] float kickX = 3f;
@@ -22,10 +19,12 @@ public class EnemyPatrol : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
     int enemyHealth = 3;
-    bool movingRight = true;
+    bool movingUp = true;
     bool isAlive = true;
     bool isHurt = false;
     float hitDirection;
+    bool isFalling = false;
+    bool isWaiting = false;
 
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
@@ -33,7 +32,7 @@ public class EnemyPatrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        animator.SetBool("isRunning",true);
+        animator.SetBool("isJumping", movingUp);
     }
 
     void Update()
@@ -51,27 +50,46 @@ public class EnemyPatrol : MonoBehaviour
     // ─── Patrol Logic ────────────────────────────────────────────────────
     void Patrol()
     {
-        float direction = movingRight ? 1f : -1f;
-        rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
-        spriteRenderer.flipX = movingRight;
+        float direction = movingUp ? 1f : -1f;
+        rb.linearVelocity = new Vector2(0, direction * moveSpeed);    
     }
 
     void CheckEdges()
     {
         // Turn around at patrol waypoints
-        if (movingRight && transform.position.x >= rightEdge.position.x)
-            TurnAround();
-        else if (!movingRight && transform.position.x <= leftEdge.position.x)
-            TurnAround();
-
-        // Turn around at ledge (no ground detected below)
-        bool groundAhead = Physics2D.OverlapCircle(groundDetect.position, detectRadius, groundLayer);
-        if (!groundAhead)
-            TurnAround();
+        if (movingUp && transform.position.y >= topEdge.position.y)
+        {
+            reachedTop();
+        }
+        else if (!movingUp && transform.position.y <= bottomEdge.position.y)
+        {
+            reachedBottom();
+        }
     }
-    void TurnAround()
+
+    void reachedTop()
     {
-        movingRight = !movingRight;
+        movingUp = !movingUp;
+        animator.SetBool("isJumping", movingUp);
+    }
+
+    void reachedBottom()
+    {
+        if (isWaiting) return;
+
+        isWaiting = true;
+        rb.linearVelocity = Vector2.zero;
+        animator.SetBool("isWaiting", isWaiting);
+        StartCoroutine(WaitingTimer());
+    }
+
+    IEnumerator WaitingTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        movingUp = true;
+        isWaiting = false;
+        animator.SetBool("isWaiting", isWaiting);
+        animator.SetBool("isJumping", movingUp);
     }
 
     // ─── Death ───────────────────────────────────────────────────────────
