@@ -28,7 +28,6 @@ public class GameSession : MonoBehaviour
     }
     void Start()
     {
-        mapPieces = 0;
         FindUIReferences();
         UpdateUI();
     }
@@ -82,6 +81,12 @@ public class GameSession : MonoBehaviour
 
         if (deathBar != null)
         {
+            if (lives == 3)
+            {
+                deathBar.transform.GetChild(3).gameObject.SetActive(true);
+                deathBar.transform.GetChild(4).gameObject.SetActive(true);
+                deathBar.transform.GetChild(5).gameObject.SetActive(true);
+            }
             if (lives == 2)
             {
                 deathBar.transform.GetChild(3).gameObject.SetActive(false);
@@ -132,7 +137,7 @@ public class GameSession : MonoBehaviour
         UpdateUI();
     }
 
-    int GetScore() => score;
+    public int GetScore() => score;
 
     // ─── Lives ───────────────────────────────────────────────────────────
     public void ProcessPlayerDeath()
@@ -163,5 +168,17 @@ public class GameSession : MonoBehaviour
             SceneManager.LoadScene(nextIndex);
         else
             FindFirstObjectByType<EndGameUI>().ShowWin();
+    }
+    // ─── Reset Game Session ───────────────────────────────────────────────────
+
+    public void ResetSession()
+    {
+        lives = 3;
+        score = 0;
+        mapPieces = 0;
+        mapFound = false;
+        keyFound = false;
+
+        UpdateUI();
     }
 }

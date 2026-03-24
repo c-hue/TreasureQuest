@@ -4699,7 +4699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205.39955, y: -334.99677}
+  m_AnchoredPosition: {x: 205.39954, y: -334.99677}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &150475317
@@ -21449,7 +21449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205.4008, y: -129.99672}
+  m_AnchoredPosition: {x: 205.40082, y: -129.9967}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1065151204
@@ -21721,7 +21721,7 @@ Transform:
   m_GameObject: {fileID: 1107055714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0429735, y: 0.90997, z: -19.95}
+  m_LocalPosition: {x: -3.0374095, y: 0.90998, z: -19.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25626,6 +25626,7 @@ MonoBehaviour:
   popupPanel: {fileID: 150475317}
   leftText: {fileID: 1399457098}
   rightText: {fileID: 807012482}
+  scoreText: {fileID: 315683161}
   playButton: {fileID: 204676912}
   resumeButton: {fileID: 443059607}
 --- !u!114 &1666467323

@@ -78338,6 +78338,7 @@ MonoBehaviour:
   popupPanel: {fileID: 1947451376}
   leftText: {fileID: 1444990905}
   rightText: {fileID: 332749621}
+  scoreText: {fileID: 740774075}
   playButton: {fileID: 1565359353}
   resumeButton: {fileID: 2034727047}
 --- !u!114 &1341154633

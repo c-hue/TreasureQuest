@@ -9,6 +9,7 @@ public class EndGameUI : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI leftText;
     [SerializeField] TextMeshProUGUI rightText;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     [SerializeField] Button playButton;
     [SerializeField] Button resumeButton;
@@ -26,7 +27,8 @@ public class EndGameUI : MonoBehaviour
        leftText.text = "Game";
        rightText.text = "Over";
         Time.timeScale = 0f;
-
+        string score = GameSession.Instance?.GetScore().ToString();
+        scoreText.text = "Score: "+ score;
         resumeButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
     }
@@ -39,6 +41,8 @@ public class EndGameUI : MonoBehaviour
        popupPanel.SetActive(true); 
        leftText.text = "You";
        rightText.text = "Win!";
+       string score = GameSession.Instance?.GetScore().ToString();
+        scoreText.text = "Score: "+ score;
        Time.timeScale = 0f;
 
         resumeButton.gameObject.SetActive(false);
@@ -51,7 +55,8 @@ public class EndGameUI : MonoBehaviour
         leftText.text = "Game";
         rightText.text = "Pause";
         Time.timeScale = 0f;
-
+        string score = GameSession.Instance?.GetScore().ToString();
+        scoreText.text = "Score: "+ score;
         resumeButton.gameObject.SetActive(true);
         playButton.gameObject.SetActive(false);
     }
@@ -66,6 +71,7 @@ public class EndGameUI : MonoBehaviour
     public void PlayAgain()
     {
         Time.timeScale = 1f;
+        GameSession.Instance?.ResetSession();
         SceneManager.LoadScene("Level1");
     }
 
