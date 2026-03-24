@@ -18,10 +18,9 @@ public class PlayerHealth : MonoBehaviour
     int currentHealth;
     bool isInvincible;
     float invincibilityTimer;
-    int counter = 0;
-
     PlayerMovement movement;
     SpriteRenderer spriteRenderer;
+    GameObject healthBar;
 
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
@@ -29,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         movement = GetComponent<PlayerMovement>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        healthBar = GameObject.Find("HealthBar");
     }
 
     void Update()
@@ -89,21 +89,19 @@ public class PlayerHealth : MonoBehaviour
     // ─── UI ──────────────────────────────────────────────────────────────
     void UpdateBarUI()
     {
-        if (counter == 0)
+        if (currentHealth == 2)
         {
-            barHealth[counter].SetActive(false);
-            counter++;
-        } else if (counter == 1)
+            healthBar.transform.GetChild(3).gameObject.SetActive(false);
+        }
+
+        if (currentHealth == 1)
         {
-            barHealth[counter].SetActive(false);
-            counter++;
-        } else if (counter == 2)
+            healthBar.transform.GetChild(4).gameObject.SetActive(false);
+        }
+
+        if (currentHealth == 0)
         {
-            barHealth[counter].SetActive(false);
-            counter++;
-        } else
-        {
-            Debug.Log("Die");
+            healthBar.transform.GetChild(5).gameObject.SetActive(false);
         }
     }
 }

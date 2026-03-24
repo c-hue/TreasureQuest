@@ -17,6 +17,7 @@ public class Collectible : MonoBehaviour
             if (name == "Map")
             {
                 GameSession.Instance?.AddMap();
+                GameSession.Instance?.AddScore(100);
             } 
 
             if (name == "Key")

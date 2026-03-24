@@ -9,21 +9,47 @@ public class GameSession : MonoBehaviour
 
     // ─── State ───────────────────────────────────────────────────────────
     [SerializeField] int lives = 3;
-    int score = 0;
+    int score;
     int mapPieces;
     public bool mapFound = false;
     public bool keyFound = false;
     GameObject mapCounter;
     GameObject scoreCounter;
-    
+    GameObject keyCounter;
+    GameObject deathBar;
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
     void Start()
     {
         mapPieces = 0;
+        FindUIReferences();
+        UpdateUI();
+    }
+    void Update()
+    {
+        UpdateUI();
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mapPieces = 0;
+        FindUIReferences();
+        UpdateUI();
+    }
+    void FindUIReferences()
+    {
         mapCounter = GameObject.Find("MapCounter");
         scoreCounter = GameObject.Find("ScoreText");
+        keyCounter = GameObject.Find("KeyCounter");
+        deathBar = GameObject.Find("DeathBar");
     }
-    
-    void Update()
+    void UpdateUI()
     {
         if (mapCounter != null)
         {
@@ -39,6 +65,40 @@ public class GameSession : MonoBehaviour
         {
             TextMeshProUGUI scoreText = scoreCounter.GetComponent<TextMeshProUGUI>();
             scoreText.text = score.ToString();
+        }
+
+        if (keyCounter != null)
+        {
+            if (keyFound)
+            {
+                keyCounter.transform.GetChild(0).gameObject.SetActive(false);
+                keyCounter.transform.GetChild(1).gameObject.SetActive(true);
+            } else
+            {
+                keyCounter.transform.GetChild(0).gameObject.SetActive(true);
+                keyCounter.transform.GetChild(1).gameObject.SetActive(false);
+            }
+        }
+
+        if (deathBar != null)
+        {
+            if (lives == 2)
+            {
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
+            }
+
+            if (lives == 1)
+            {
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
+                deathBar.transform.GetChild(4).gameObject.SetActive(false);
+            }
+
+            if (lives == 0)
+            {
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
+                deathBar.transform.GetChild(4).gameObject.SetActive(false);
+                deathBar.transform.GetChild(5).gameObject.SetActive(false);
+            }
         }
     }
 
@@ -69,6 +129,7 @@ public class GameSession : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
+        UpdateUI();
     }
 
     int GetScore() => score;
