@@ -4,11 +4,13 @@ public class Collectible : MonoBehaviour
 {
     [SerializeField] int pointValue;
     [SerializeField] GameObject collectEffect;
+    Animator animator;
 
     void Start()
     {
         string name = this.transform.name;
         string tag = this.transform.tag;
+        animator = GetComponent<Animator>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -45,10 +47,16 @@ public class Collectible : MonoBehaviour
                 GameSession.Instance?.AddScore(pointValue);
             }
             
+            
             AudioManager.Instance?.PlayCollect();
+            animator.SetTrigger("Collect");
             if (collectEffect != null)
                 Instantiate(collectEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
         }
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }
