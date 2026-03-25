@@ -33,6 +33,7 @@ public class GameSession : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log(lives);
         UpdateUI();
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -95,11 +96,14 @@ public class GameSession : MonoBehaviour
             {
                 deathBar.transform.GetChild(5).gameObject.SetActive(true);
                 deathBar.transform.GetChild(4).gameObject.SetActive(false);
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
 
             if (lives == 0)
             {
                 deathBar.transform.GetChild(5).gameObject.SetActive(false);
+                deathBar.transform.GetChild(4).gameObject.SetActive(false);
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
         }
     }
@@ -171,7 +175,7 @@ public class GameSession : MonoBehaviour
     public void LoadNextLevel()
     {
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        Debug.Log(nextIndex);
+        //Debug.Log(nextIndex);
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(nextIndex);
         else

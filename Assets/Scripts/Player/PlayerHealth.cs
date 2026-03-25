@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         HandleInvincibility();
-        Debug.Log(currentHealth);
+        // Debug.Log(currentHealth);
     }
 
     // ─── Invincibility Flash ─────────────────────────────────────────────
