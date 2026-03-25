@@ -90,6 +90,7 @@ public class EnemyPatrol : MonoBehaviour
         } else
         {
             isAlive = false;
+            GameSession.Instance?.AddScore(500);
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("die");
         }
