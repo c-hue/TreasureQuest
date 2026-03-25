@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using TMPro;
 
 public class GameSession : MonoBehaviour
@@ -17,6 +18,8 @@ public class GameSession : MonoBehaviour
     GameObject scoreCounter;
     GameObject keyCounter;
     GameObject deathBar;
+    List<string> collectedItems = new List<string>();
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -51,6 +54,7 @@ public class GameSession : MonoBehaviour
     }
     void UpdateUI()
     {
+        // Map collectible
         if (mapCounter != null)
         {
             TextMeshProUGUI mapText = mapCounter.GetComponent<TextMeshProUGUI>();
@@ -61,12 +65,14 @@ public class GameSession : MonoBehaviour
             }
         }
 
+        // Score
         if (scoreCounter != null)
         {
             TextMeshProUGUI scoreText = scoreCounter.GetComponent<TextMeshProUGUI>();
             scoreText.text = score.ToString();
         }
 
+        // Key collectible
         if (keyCounter != null)
         {
             if (keyFound)
@@ -80,6 +86,7 @@ public class GameSession : MonoBehaviour
             }
         }
 
+        // Death bar
         if (deathBar != null)
         {
             if (lives == 3)
@@ -129,6 +136,18 @@ public class GameSession : MonoBehaviour
     public void KeyFound()
     {
         keyFound = true;
+    }
+
+    // ─── Collectibles ───────────────────────────────────────────────────────────
+    public void MarkCollected(string id)
+    {
+        if (!collectedItems.Contains(id))
+            collectedItems.Add(id);
+    }
+
+    public bool IsCollected(string id)
+    {
+        return collectedItems.Contains(id);
     }
 
     // ─── Score ───────────────────────────────────────────────────────────
@@ -190,6 +209,7 @@ public class GameSession : MonoBehaviour
         mapPieces = 0;
         mapFound = false;
         keyFound = false;
+        collectedItems.Clear();
 
         UpdateUI();
     }
