@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b1ee912f4a4489c808bb634febbce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  pointValue: 100
+  pointValue: 1000
   collectEffect: {fileID: 0}
 --- !u!95 &8501025859199375418
 Animator:

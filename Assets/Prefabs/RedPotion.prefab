@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1732609189271424816}
   m_Layer: 0
   m_Name: RedPotion
-  m_TagString: Coin
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b1ee912f4a4489c808bb634febbce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  pointValue: 100
+  pointValue: 250
   collectEffect: {fileID: 0}
 --- !u!95 &7432458727267247815
 Animator:

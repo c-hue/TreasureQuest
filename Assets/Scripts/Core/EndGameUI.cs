@@ -56,7 +56,7 @@ public class EndGameUI : MonoBehaviour
         rightText.text = "Pause";
         Time.timeScale = 0f;
         string score = GameSession.Instance?.GetScore().ToString();
-        scoreText.text = "Score: "+ score;
+        scoreText.text = "Score: " + score;
         resumeButton.gameObject.SetActive(true);
         playButton.gameObject.SetActive(false);
     }

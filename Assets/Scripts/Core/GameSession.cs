@@ -84,24 +84,21 @@ public class GameSession : MonoBehaviour
             if (lives == 3)
             {
                 deathBar.transform.GetChild(3).gameObject.SetActive(true);
-                deathBar.transform.GetChild(4).gameObject.SetActive(true);
-                deathBar.transform.GetChild(5).gameObject.SetActive(true);
             }
             if (lives == 2)
             {
+                deathBar.transform.GetChild(4).gameObject.SetActive(true);
                 deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
 
             if (lives == 1)
             {
-                deathBar.transform.GetChild(3).gameObject.SetActive(false);
+                deathBar.transform.GetChild(5).gameObject.SetActive(true);
                 deathBar.transform.GetChild(4).gameObject.SetActive(false);
             }
 
             if (lives == 0)
             {
-                deathBar.transform.GetChild(3).gameObject.SetActive(false);
-                deathBar.transform.GetChild(4).gameObject.SetActive(false);
                 deathBar.transform.GetChild(5).gameObject.SetActive(false);
             }
         }
@@ -147,6 +144,17 @@ public class GameSession : MonoBehaviour
             ReloadCurrentScene();
         else
             LoadGameOver();
+    }
+
+    public int CheckLives()
+    {
+        return lives;
+    }
+
+    public void AddLife()
+    {
+        lives += 1;
+        UpdateUI();
     }
 
     // ─── Scene Loading ───────────────────────────────────────────────────

@@ -19,7 +19,7 @@ public class Collectible : MonoBehaviour
             if (name == "Map")
             {
                 GameSession.Instance?.AddMap();
-                GameSession.Instance?.AddScore(100);
+                GameSession.Instance?.AddScore(250);
             } 
 
             if (name == "Key")
@@ -29,24 +29,19 @@ public class Collectible : MonoBehaviour
 
             if (tag == "Coin")
             {
-                switch(name)
-                {
-                    case "BlueDia":
-                        pointValue = 1000;
-                        break;
-                    case "GreenDia":
-                        pointValue = 500;
-                        break;
-                    case "GoldCoin":
-                        pointValue = 100;
-                        break;
-                    case "SilverCoin":
-                        pointValue = 50;
-                        break;
-                }
                 GameSession.Instance?.AddScore(pointValue);
             }
-            
+
+            if (tag == "Potion")
+            {
+                PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+                if (name.StartsWith("Red") && playerHealth.CheckHealth() < 3)
+                    playerHealth.Heal();
+                else if (name.StartsWith("Green") && GameSession.Instance?.CheckLives() < 3)
+                    GameSession.Instance?.AddLife();
+                else
+                    GameSession.Instance?.AddScore(pointValue);
+            }        
             
             AudioManager.Instance?.PlayCollect();
             animator.SetTrigger("Collect");

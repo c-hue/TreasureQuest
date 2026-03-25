@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         HandleInvincibility();
+        Debug.Log(currentHealth);
     }
 
     // ─── Invincibility Flash ─────────────────────────────────────────────
@@ -73,6 +74,15 @@ public class PlayerHealth : MonoBehaviour
         invincibilityTimer = invincibilityDuration;
     }
 
+    public int CheckHealth() {
+        return currentHealth;
+    }
+
+    public void Heal() {
+        currentHealth += 1;
+        UpdateBarUI();
+    }
+
     void Die()
     {
         if (deathParticles != null)
@@ -89,13 +99,19 @@ public class PlayerHealth : MonoBehaviour
     // ─── UI ──────────────────────────────────────────────────────────────
     void UpdateBarUI()
     {
+        if (currentHealth == 3)
+        {
+            healthBar.transform.GetChild(3).gameObject.SetActive(true);
+        }
         if (currentHealth == 2)
         {
+            healthBar.transform.GetChild(4).gameObject.SetActive(true);
             healthBar.transform.GetChild(3).gameObject.SetActive(false);
         }
 
         if (currentHealth == 1)
         {
+            healthBar.transform.GetChild(5).gameObject.SetActive(true);
             healthBar.transform.GetChild(4).gameObject.SetActive(false);
         }
 
