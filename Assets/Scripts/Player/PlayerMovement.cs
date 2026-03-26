@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) return;
+        if (!isAlive || Time.timeScale == 0f) return;
 
         ReadInput();
         CheckGrounded();  
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isAlive) return;
+        if (!isAlive || Time.timeScale == 0f) return;
         Move();
         ApplyBetterJumpPhysics();
     }

@@ -44,6 +44,30 @@ public class GameSession : MonoBehaviour
         mapPieces = 0;
         FindUIReferences();
         UpdateUI();
+
+        PauseGameUI ui = FindFirstObjectByType<PauseGameUI>();
+        if (scene.name == "Level1")
+        {
+            ui.ShowDialogue(
+                "Argh! Me crew's gone missin'! This  island be the last place I laid eyes on 'em. Mayhap I can find the map they were followin' fer some clues...",
+                2
+            );
+        }
+        else if (scene.name == "Level2")
+        {
+            ui.ShowDialogue(
+                "Shiver me timbers! Our ship's helm be in pieces! The rest o' the ship must be nearby... an' I pray it's in better shape than this wrecked helm.",
+                1
+            );
+        }
+        else if (scene.name == "Level3")
+        {
+            ui.ShowDialogue(
+                "This can't be!  Me own crew... cursed an' risen as the undead! I'll not let ye suffer like this. By me blade, it's time to walk the plank!",
+                0
+            );
+        }
+
     }
     void FindUIReferences()
     {
@@ -188,7 +212,7 @@ public class GameSession : MonoBehaviour
 
     void LoadGameOver()
     {
-        FindFirstObjectByType<EndGameUI>().ShowLose();
+        FindFirstObjectByType<PauseGameUI>().ShowLose();
     }
 
     public void LoadNextLevel()
@@ -198,7 +222,7 @@ public class GameSession : MonoBehaviour
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(nextIndex);
         else
-            FindFirstObjectByType<EndGameUI>().ShowWin();
+            FindFirstObjectByType<PauseGameUI>().ShowWin();
     }
     // ─── Reset Game Session ───────────────────────────────────────────────────
 
