@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using TMPro;
 
 public class GameSession : MonoBehaviour
@@ -17,6 +18,8 @@ public class GameSession : MonoBehaviour
     GameObject scoreCounter;
     GameObject keyCounter;
     GameObject deathBar;
+    List<string> collectedItems = new List<string>();
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -33,6 +36,7 @@ public class GameSession : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log(lives);
         UpdateUI();
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -40,6 +44,30 @@ public class GameSession : MonoBehaviour
         mapPieces = 0;
         FindUIReferences();
         UpdateUI();
+
+        PauseGameUI ui = FindFirstObjectByType<PauseGameUI>();
+        if (scene.name == "Level1")
+        {
+            ui.ShowDialogue(
+                "Argh! Me crew's gone missin'! This  island be the last place I laid eyes on 'em. Mayhap I can find the map they were followin' fer some clues...",
+                2
+            );
+        }
+        else if (scene.name == "Level2")
+        {
+            ui.ShowDialogue(
+                "Shiver me timbers! Our ship's helm be in pieces! The rest o' the ship must be nearby... an' I pray it's in better shape than this wrecked helm.",
+                1
+            );
+        }
+        else if (scene.name == "Level3")
+        {
+            ui.ShowDialogue(
+                "This can't be!  Me own crew... cursed an' risen as the undead! I'll not let ye suffer like this. By me blade, it's time to walk the plank!",
+                0
+            );
+        }
+
     }
     void FindUIReferences()
     {
@@ -50,6 +78,7 @@ public class GameSession : MonoBehaviour
     }
     void UpdateUI()
     {
+        // Map collectible
         if (mapCounter != null)
         {
             TextMeshProUGUI mapText = mapCounter.GetComponent<TextMeshProUGUI>();
@@ -60,12 +89,14 @@ public class GameSession : MonoBehaviour
             }
         }
 
+        // Score
         if (scoreCounter != null)
         {
             TextMeshProUGUI scoreText = scoreCounter.GetComponent<TextMeshProUGUI>();
             scoreText.text = score.ToString();
         }
 
+        // Key collectible
         if (keyCounter != null)
         {
             if (keyFound)
@@ -79,30 +110,31 @@ public class GameSession : MonoBehaviour
             }
         }
 
+        // Death bar
         if (deathBar != null)
         {
             if (lives == 3)
             {
                 deathBar.transform.GetChild(3).gameObject.SetActive(true);
-                deathBar.transform.GetChild(4).gameObject.SetActive(true);
-                deathBar.transform.GetChild(5).gameObject.SetActive(true);
             }
             if (lives == 2)
             {
+                deathBar.transform.GetChild(4).gameObject.SetActive(true);
                 deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
 
             if (lives == 1)
             {
-                deathBar.transform.GetChild(3).gameObject.SetActive(false);
+                deathBar.transform.GetChild(5).gameObject.SetActive(true);
                 deathBar.transform.GetChild(4).gameObject.SetActive(false);
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
 
             if (lives == 0)
             {
-                deathBar.transform.GetChild(3).gameObject.SetActive(false);
-                deathBar.transform.GetChild(4).gameObject.SetActive(false);
                 deathBar.transform.GetChild(5).gameObject.SetActive(false);
+                deathBar.transform.GetChild(4).gameObject.SetActive(false);
+                deathBar.transform.GetChild(3).gameObject.SetActive(false);
             }
         }
     }
@@ -130,6 +162,18 @@ public class GameSession : MonoBehaviour
         keyFound = true;
     }
 
+    // ─── Collectibles ───────────────────────────────────────────────────────────
+    public void MarkCollected(string id)
+    {
+        if (!collectedItems.Contains(id))
+            collectedItems.Add(id);
+    }
+
+    public bool IsCollected(string id)
+    {
+        return collectedItems.Contains(id);
+    }
+
     // ─── Score ───────────────────────────────────────────────────────────
     public void AddScore(int points)
     {
@@ -149,6 +193,17 @@ public class GameSession : MonoBehaviour
             LoadGameOver();
     }
 
+    public int CheckLives()
+    {
+        return lives;
+    }
+
+    public void AddLife()
+    {
+        lives += 1;
+        UpdateUI();
+    }
+
     // ─── Scene Loading ───────────────────────────────────────────────────
     void ReloadCurrentScene()
     {
@@ -157,17 +212,17 @@ public class GameSession : MonoBehaviour
 
     void LoadGameOver()
     {
-        FindFirstObjectByType<EndGameUI>().ShowLose();
+        FindFirstObjectByType<PauseGameUI>().ShowLose();
     }
 
     public void LoadNextLevel()
     {
         int nextIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        Debug.Log(nextIndex);
+        //Debug.Log(nextIndex);
         if (nextIndex < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(nextIndex);
         else
-            FindFirstObjectByType<EndGameUI>().ShowWin();
+            FindFirstObjectByType<PauseGameUI>().ShowWin();
     }
     // ─── Reset Game Session ───────────────────────────────────────────────────
 
@@ -178,6 +233,7 @@ public class GameSession : MonoBehaviour
         mapPieces = 0;
         mapFound = false;
         keyFound = false;
+        collectedItems.Clear();
 
         UpdateUI();
     }

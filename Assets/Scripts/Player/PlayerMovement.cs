@@ -25,11 +25,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 2f;
 
+    [Header("Particles")]
+    [SerializeField] GameObject dustParticle;
+
 
     // --- Private Variables ---------------------------------------------------------------
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    SpriteRenderer dustRenderer;
 
     private float gravityScale;
     private float linearDrag;
@@ -45,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();   
+        spriteRenderer = GetComponent<SpriteRenderer>(); 
+        dustRenderer = dustParticle.GetComponent<SpriteRenderer>();  
 
         gravityScale = rb.gravityScale;
         linearDrag = rb.linearDamping;
@@ -54,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) return;
+        if (!isAlive || Time.timeScale == 0f) return;
 
         ReadInput();
         CheckGrounded();  
@@ -66,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isAlive) return;
+        if (!isAlive || Time.timeScale == 0f) return;
         Move();
         ApplyBetterJumpPhysics();
     }
@@ -150,9 +155,15 @@ public class PlayerMovement : MonoBehaviour
     void FlipSprite()
     {
         if (horizontalInput > 0)
+        {
             spriteRenderer.flipX = false;
+            dustRenderer.flipX = false;
+        }
         else if (horizontalInput < 0)
+        {
             spriteRenderer.flipX = true;
+            dustRenderer.flipX = true;
+        }
     }
 
     // --- Animator ---------------------------------------------------------------
