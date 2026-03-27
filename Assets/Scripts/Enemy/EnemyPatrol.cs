@@ -26,6 +26,7 @@ public class EnemyPatrol : MonoBehaviour
     bool isAlive = true;
     bool isHurt = false;
     float hitDirection;
+    GameObject enemyTracker;
 
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
@@ -34,6 +35,7 @@ public class EnemyPatrol : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         animator.SetBool("isRunning",true);
+        enemyTracker = GameObject.Find("EnemyCounter");
     }
 
     void Update()
@@ -91,6 +93,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             isAlive = false;
             GameSession.Instance?.AddScore(500);
+            enemyDefeated();
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("die");
         }
@@ -108,6 +111,14 @@ public class EnemyPatrol : MonoBehaviour
         isHurt = false;
     }
 
+    void enemyDefeated()
+    {
+        if (enemyTracker != null)
+        {
+            GameSession.Instance?.EnemyDefeated();
+        }
+        
+    }
     public void DestroyObject()
     {
         Destroy(gameObject);

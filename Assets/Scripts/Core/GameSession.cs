@@ -14,10 +14,13 @@ public class GameSession : MonoBehaviour
     int mapPieces;
     public bool mapFound = false;
     public bool keyFound = false;
+    [SerializeField] int enemies = 4;
+    public bool enemiesDefeated = false;
     GameObject mapCounter;
     GameObject scoreCounter;
     GameObject keyCounter;
     GameObject deathBar;
+    GameObject enemyCounter;
     List<string> collectedItems = new List<string>();
 
     void OnEnable()
@@ -42,6 +45,9 @@ public class GameSession : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         mapPieces = 0;
+        mapFound = false;
+        keyFound = false;
+        enemiesDefeated = false;
         FindUIReferences();
         UpdateUI();
 
@@ -74,6 +80,7 @@ public class GameSession : MonoBehaviour
         mapCounter = GameObject.Find("MapCounter");
         scoreCounter = GameObject.Find("ScoreText");
         keyCounter = GameObject.Find("KeyCounter");
+        enemyCounter = GameObject.Find("EnemyCounter");
         deathBar = GameObject.Find("DeathBar");
     }
     void UpdateUI()
@@ -107,6 +114,17 @@ public class GameSession : MonoBehaviour
             {
                 keyCounter.transform.GetChild(0).gameObject.SetActive(true);
                 keyCounter.transform.GetChild(1).gameObject.SetActive(false);
+            }
+        }
+
+        // Enemy Counter
+        if (enemyCounter != null)
+        {
+            TextMeshProUGUI enemyText = enemyCounter.GetComponent<TextMeshProUGUI>();
+            enemyText.text = enemies.ToString();
+            if (enemies == 0)
+            {
+                enemiesDefeated = true;
             }
         }
 
@@ -160,6 +178,12 @@ public class GameSession : MonoBehaviour
     public void KeyFound()
     {
         keyFound = true;
+    }
+
+    // ─── Enemy ───────────────────────────────────────────────────────────
+    public void EnemyDefeated()
+    {
+        enemies -= 1;
     }
 
     // ─── Collectibles ───────────────────────────────────────────────────────────
@@ -231,8 +255,10 @@ public class GameSession : MonoBehaviour
         lives = 3;
         score = 0;
         mapPieces = 0;
+        enemies = 4;
         mapFound = false;
         keyFound = false;
+        enemiesDefeated = false;
         collectedItems.Clear();
 
         UpdateUI();

@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/Core/AudioManager.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
+    <Compile Include="Assets/Scripts/Core/PauseGameUI.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerShooter.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
@@ -72,10 +73,8 @@
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Scripts/Core/Level2Exit.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
-    <Compile Include="Assets/Scripts/Core/PauseMenu.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
-    <Compile Include="Assets/Scripts/Core/EndGameUI.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Art/UI/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />

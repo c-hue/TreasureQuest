@@ -21,6 +21,7 @@ public class EnemyJump : MonoBehaviour
     float hitDirection;
     bool isFalling = false;
     bool isWaiting = false;
+    GameObject enemyTracker;
 
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
@@ -29,6 +30,7 @@ public class EnemyJump : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         animator.SetBool("isJumping", movingUp);
+        enemyTracker = GameObject.Find("EnemyCounter");
     }
 
     void Update()
@@ -110,6 +112,8 @@ public class EnemyJump : MonoBehaviour
         } else
         {
             isAlive = false;
+            GameSession.Instance?.AddScore(500);
+            enemyDefeated();
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("die");
         }
@@ -120,6 +124,14 @@ public class EnemyJump : MonoBehaviour
         isHurt = false;
     }
 
+    void enemyDefeated()
+    {
+        if (enemyTracker != null)
+        {
+            GameSession.Instance?.EnemyDefeated();
+        }
+        
+    }
     public void DestroyObject()
     {
         Destroy(gameObject);
