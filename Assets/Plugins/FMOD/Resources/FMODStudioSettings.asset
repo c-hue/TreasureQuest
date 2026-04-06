@@ -260,6 +260,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Dialogue
   - Music
   - SFX
   BanksToLoad: []

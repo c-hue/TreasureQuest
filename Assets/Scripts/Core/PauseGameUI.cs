@@ -32,6 +32,7 @@ public class PauseGameUI : MonoBehaviour
         // E to exit dialogue
         if (showingDialogue && Keyboard.current.eKey.wasPressedThisFrame)
         {
+            AudioManager.Instance?.StopVoiceLine();
             ResumeGame();
             return;
         }
@@ -65,6 +66,7 @@ public class PauseGameUI : MonoBehaviour
 
         resumeButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
+        AudioManager.Instance?.StopMusic();
         AudioManager.Instance?.PlayOneShot("loseMusic");
     }
 
@@ -84,6 +86,7 @@ public class PauseGameUI : MonoBehaviour
 
         resumeButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
+        AudioManager.Instance?.StopMusic();
         AudioManager.Instance?.PlayOneShot("winMusic");
     }
 
@@ -101,7 +104,7 @@ public class PauseGameUI : MonoBehaviour
         playButton.gameObject.SetActive(false);
     }
 
-    public void ShowDialogue(string text, int iconIndex)
+    public void ShowDialogue(string text, int iconIndex, string voiceName)
     {
         dialoguePanel.SetActive(true);
         dialogueText.text = text;
@@ -110,6 +113,9 @@ public class PauseGameUI : MonoBehaviour
 
         showingDialogue = true;
         Time.timeScale = 0f;
+
+        AudioManager.Instance?.LowerVolume();
+        AudioManager.Instance.PlayVoiceLine(voiceName);
     }
 
     // --- Menu Options ---------------------------------------------
@@ -132,6 +138,7 @@ public class PauseGameUI : MonoBehaviour
         menuPanel.SetActive(false);
         dialoguePanel.SetActive(false);
 
+        AudioManager.Instance?.RestoreVolume();
         showingDialogue = false;
         isPaused = false;
     }

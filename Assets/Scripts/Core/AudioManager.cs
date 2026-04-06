@@ -14,8 +14,15 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [SerializeField] SoundEntry[] musicSounds, sfxSounds;
+    [Header("Sounds")]
+    [SerializeField] SoundEntry[] musicSounds, voiceLines, sfxSounds;
+
+    [Header("Music Volume")]
+    [SerializeField] float normalVolume = 1f;
+    [SerializeField] float dialogueVolume = 0.35f;
+
     private EventInstance currentMusic;
+    private EventInstance currentVoice;
     
     void Awake()
     {
@@ -56,6 +63,43 @@ public class AudioManager : MonoBehaviour
         {
             currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             currentMusic.release();
+        }
+    }
+
+    public void LowerVolume()
+    {
+        if (currentMusic.isValid())
+        {
+            currentMusic.setVolume(dialogueVolume);
+        }
+    }
+
+    public void RestoreVolume()
+    {
+        if (currentMusic.isValid())
+        {
+            currentMusic.setVolume(normalVolume);
+        }
+    }
+
+
+    // --- VOICE DIALOGUE ----------------------------------------
+    public void PlayVoiceLine(string voiceName)
+    {
+        SoundEntry s = Array.Find(voiceLines, x => x.soundName == voiceName);
+        if (s == null) return;
+
+        StopVoiceLine();
+        currentVoice = RuntimeManager.CreateInstance(s.eventRef);
+        currentVoice.start();
+    }
+
+    public void StopVoiceLine()
+    {
+        if (currentVoice.isValid())
+        {
+            currentVoice.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentVoice.release();
         }
     }
 }

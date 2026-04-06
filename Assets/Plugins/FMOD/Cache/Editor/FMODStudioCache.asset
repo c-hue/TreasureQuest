@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: ../Test/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639110262660609917
+  lastModified: 639110748074287370
   FileSizes:
   - Name: Desktop
     Value: 6902176
@@ -100,7 +100,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3300
+  Length: 3750
+--- !u!114 &-7472696754678830510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl1Start
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl1Start
+  Guid:
+    Data1: -596703425
+    Data2: 1239985880
+    Data3: 118201236
+    Data4: -520142442
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7056014210293131416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +182,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6498855629624465588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogue.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../Test/Build/Desktop/Dialogue.bank
+  Name: Dialogue
+  StudioPath: bank:/Dialogue
+  lastModified: 639110330006929721
+  FileSizes:
+  - Name: Desktop
+    Value: 1257312
+  Exists: 1
 --- !u!114 &-6378197229872582579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +283,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5290657672894613636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl2Start
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl2Start
+  Guid:
+    Data1: 252530129
+    Data2: 1170137637
+    Data3: 494164114
+    Data4: 753232668
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3990659623449015760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +325,7 @@ MonoBehaviour:
   Path: ../Test/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639110262660102415
+  lastModified: 639110744445036556
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -298,10 +372,10 @@ MonoBehaviour:
   Path: ../Test/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639110262660110725
+  lastModified: 639110744445044037
   FileSizes:
   - Name: Desktop
-    Value: 1946
+    Value: 2366
   Exists: 1
 --- !u!114 &-2429212032681793377
 MonoBehaviour:
@@ -401,6 +475,7 @@ MonoBehaviour:
   - {fileID: -3990659623449015760}
   - {fileID: 5660139781154485729}
   - {fileID: -8351852392976110750}
+  - {fileID: -6498855629624465588}
   EditorEvents:
   - {fileID: -5437955540886453947}
   - {fileID: 7784306794336184028}
@@ -426,13 +501,22 @@ MonoBehaviour:
   - {fileID: -7865498636458691043}
   - {fileID: 7450709624577705095}
   - {fileID: -7555880908456986958}
+  - {fileID: -7472696754678830510}
+  - {fileID: 6274991586911794232}
+  - {fileID: 309183082264009102}
+  - {fileID: 1583364601363344482}
+  - {fileID: 1690298721768111416}
+  - {fileID: 2968833171120083154}
+  - {fileID: -5290657672894613636}
+  - {fileID: 9222778538135765131}
+  - {fileID: 7201001873472852935}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3990659623449015760}
   StringsBanks:
   - {fileID: -2726196478590552929}
   cacheVersion: 131858
-  cacheTime: 639110262662870068
+  cacheTime: 639110748074651782
   SerializableEventsDict:
   - key: event:/sfx/ButtonClick
     index: 0
@@ -482,6 +566,51 @@ MonoBehaviour:
     index: 22
   - key: event:/sfx/Lose
     index: 23
+  - key: event:/dialogue/Lvl1Start
+    index: 24
+  - key: event:/dialogue/Lvl3Pause
+    index: 25
+  - key: event:/dialogue/Lvl1Pause
+    index: 26
+  - key: event:/dialogue/Lvl2End
+    index: 27
+  - key: event:/dialogue/Lvl3End
+    index: 28
+  - key: event:/dialogue/Lvl3Start
+    index: 29
+  - key: event:/dialogue/Lvl2Start
+    index: 30
+  - key: event:/dialogue/Lvl1End
+    index: 31
+  - key: event:/dialogue/Lvl2Pause
+    index: 32
+--- !u!114 &309183082264009102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl1Pause
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl1Pause
+  Guid:
+    Data1: -1420152188
+    Data2: 1335986555
+    Data3: -1548624205
+    Data4: 1663069277
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &351452586886613586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +659,60 @@ MonoBehaviour:
   Banks:
   - {fileID: 5660139781154485729}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1583364601363344482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl2End
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl2End
+  Guid:
+    Data1: -193099377
+    Data2: 1320557562
+    Data3: -1912380005
+    Data4: -1294771508
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1690298721768111416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl3End
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl3End
+  Guid:
+    Data1: 934942362
+    Data2: 1112067985
+    Data3: 445553029
+    Data4: 1905260793
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -617,6 +800,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 736
+--- !u!114 &2968833171120083154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl3Start
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl3Start
+  Guid:
+    Data1: -2072990561
+    Data2: 1301257889
+    Data3: -1943215686
+    Data4: 1745849044
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4144967480919501662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +869,7 @@ MonoBehaviour:
   Path: ../Test/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639110262662870068
+  lastModified: 639110748074651782
   FileSizes:
   - Name: Desktop
     Value: 419936
@@ -685,6 +895,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 5660139781154485729}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6274991586911794232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl3Pause
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl3Pause
+  Guid:
+    Data1: -186426305
+    Data2: 1119822920
+    Data3: -2077451084
+    Data4: -813105988
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -718,6 +955,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7201001873472852935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl2Pause
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl2Pause
+  Guid:
+    Data1: 2058205176
+    Data2: 1328630099
+    Data3: -316726379
+    Data4: 1961586652
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7450709624577705095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,10 +996,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/sfx/Win
   Guid:
-    Data1: -1361229882
-    Data2: 1320476280
-    Data3: 889424800
-    Data4: 387211503
+    Data1: 835176041
+    Data2: 1084315986
+    Data3: -615705166
+    Data4: 11084491
   Banks:
   - {fileID: 5660139781154485729}
   IsStream: 0
@@ -744,7 +1008,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 2565
 --- !u!114 &7784306794336184028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,3 +1090,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 90849
+--- !u!114 &9222778538135765131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/dialogue/Lvl1End
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/dialogue/Lvl1End
+  Guid:
+    Data1: 360511218
+    Data2: 1189805764
+    Data3: -302201444
+    Data4: 290718404
+  Banks:
+  - {fileID: -6498855629624465588}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

@@ -11,7 +11,8 @@ public class Level2Exit : MonoBehaviour
             {
                 FindFirstObjectByType<PauseGameUI>().ShowDialogue(
                 "Curse the seas! The ship be in ruins! I pray me crew made it out alive. Best I haul what's left o' her back to shore an' have a look inside.",
-                0
+                0,
+                "Lvl2End"
             );
                 StartCoroutine(LoadNextLevel());
             }
@@ -20,7 +21,8 @@ public class Level2Exit : MonoBehaviour
         {
             FindFirstObjectByType<PauseGameUI>().ShowDialogue(
                 "Blimey! The ship be locked tight. Mayhap me crew dropped the key somewhere 'round this cave...",
-                2
+                2,
+                "Lvl2Pause"
             );
         }
     }

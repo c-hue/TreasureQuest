@@ -57,7 +57,8 @@ public class GameSession : MonoBehaviour
             AudioManager.Instance?.PlayMusic("Lvl1Music");
             ui.ShowDialogue(
                 "Argh! Me crew's gone missin'! This  island be the last place I laid eyes on 'em. Mayhap I can find the map they were followin' fer some clues...",
-                2
+                2,
+                "Lvl1Start"
             );
         }
         else if (scene.name == "Level2")
@@ -65,7 +66,8 @@ public class GameSession : MonoBehaviour
             AudioManager.Instance?.PlayMusic("Lvl2Music");
             ui.ShowDialogue(
                 "Shiver me timbers! Our ship's helm be in pieces! The rest o' the ship must be nearby... an' I pray it's in better shape than this wrecked helm.",
-                1
+                1,
+                "Lvl2Start"
             );
         }
         else if (scene.name == "Level3")
@@ -73,7 +75,8 @@ public class GameSession : MonoBehaviour
             AudioManager.Instance?.PlayMusic("Lvl3Music");
             ui.ShowDialogue(
                 "This can't be!  Me own crew... cursed an' risen as the undead! I'll not let ye suffer like this. By me blade, it's time to walk the plank!",
-                0
+                0,
+                "Lvl3Start"
             );
         }
 

@@ -81913,6 +81913,79 @@ MonoBehaviour:
         Data3: 1137925823
         Data4: -1838089876
       Path: event:/music/Level3
+  voiceLines:
+  - soundName: Lvl1Start
+    eventRef:
+      Guid:
+        Data1: -596703425
+        Data2: 1239985880
+        Data3: 118201236
+        Data4: -520142442
+      Path: event:/dialogue/Lvl1Start
+  - soundName: Lvl1Pause
+    eventRef:
+      Guid:
+        Data1: -1420152188
+        Data2: 1335986555
+        Data3: -1548624205
+        Data4: 1663069277
+      Path: event:/dialogue/Lvl1Pause
+  - soundName: Lvl1End
+    eventRef:
+      Guid:
+        Data1: 360511218
+        Data2: 1189805764
+        Data3: -302201444
+        Data4: 290718404
+      Path: event:/dialogue/Lvl1End
+  - soundName: Lvl2Start
+    eventRef:
+      Guid:
+        Data1: 252530129
+        Data2: 1170137637
+        Data3: 494164114
+        Data4: 753232668
+      Path: event:/dialogue/Lvl2Start
+  - soundName: Lvl2Pause
+    eventRef:
+      Guid:
+        Data1: 2058205176
+        Data2: 1328630099
+        Data3: -316726379
+        Data4: 1961586652
+      Path: event:/dialogue/Lvl2Pause
+  - soundName: Lvl2End
+    eventRef:
+      Guid:
+        Data1: -193099377
+        Data2: 1320557562
+        Data3: -1912380005
+        Data4: -1294771508
+      Path: event:/dialogue/Lvl2End
+  - soundName: Lvl3Start
+    eventRef:
+      Guid:
+        Data1: -2072990561
+        Data2: 1301257889
+        Data3: -1943215686
+        Data4: 1745849044
+      Path: event:/dialogue/Lvl3Start
+  - soundName: Lvl3Pause
+    eventRef:
+      Guid:
+        Data1: -186426305
+        Data2: 1119822920
+        Data3: -2077451084
+        Data4: -813105988
+      Path: event:/dialogue/Lvl3Pause
+  - soundName: Lvl3End
+    eventRef:
+      Guid:
+        Data1: 934942362
+        Data2: 1112067985
+        Data3: 445553029
+        Data4: 1905260793
+      Path: event:/dialogue/Lvl3End
   sfxSounds:
   - soundName: buttonClick
     eventRef:
@@ -82058,6 +82131,22 @@ MonoBehaviour:
         Data3: 1449445009
         Data4: -705819928
       Path: event:/sfx/enemies/SeashellShoot
+  - soundName: winMusic
+    eventRef:
+      Guid:
+        Data1: -1361229882
+        Data2: 1320476280
+        Data3: 889424800
+        Data4: 387211503
+      Path: event:/sfx/Win
+  - soundName: loseMusic
+    eventRef:
+      Guid:
+        Data1: 2073558224
+        Data2: 1131564717
+        Data3: 1228981921
+        Data4: 1424642523
+      Path: event:/sfx/Lose
 --- !u!4 &1137424995
 Transform:
   m_ObjectHideFlags: 0
