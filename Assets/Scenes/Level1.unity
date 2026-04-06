@@ -295,6 +295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 488182065759461471, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: m_Name
+      value: crab
+      objectReference: {fileID: 0}
     - target: {fileID: 558325098177704802, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.56
@@ -354,6 +358,26 @@ PrefabInstance:
     - target: {fileID: 5951869354428257904, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Path
+      value: event:/sfx/PlayerHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data1
+      value: 708205589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data2
+      value: 1282326336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data3
+      value: 171220370
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data4
+      value: 1372285521
       objectReference: {fileID: 0}
     - target: {fileID: 7843503015778019296, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_Name
@@ -75043,6 +75067,8 @@ MonoBehaviour:
   lives: 3
   mapFound: 0
   keyFound: 0
+  enemies: 4
+  enemiesDefeated: 0
 --- !u!4 &260772770
 Transform:
   m_ObjectHideFlags: 0
@@ -81635,6 +81661,8 @@ GameObject:
   - component: {fileID: 1107055717}
   - component: {fileID: 1107055716}
   - component: {fileID: 1107055715}
+  - component: {fileID: 1107055720}
+  - component: {fileID: 1107055721}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -81792,11 +81820,259 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107055720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107055714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 1415157213}
+--- !u!114 &1107055721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107055714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600b4d022ecc248feba45b04217dcb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!4 &1116520610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 534870534954881434, guid: 6aa591e8c889c42aaa4d6ec0d1554c8f, type: 3}
   m_PrefabInstance: {fileID: 844826775}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1137424993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137424995}
+  - component: {fileID: 1137424994}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1137424994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137424993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932cb1653309946e2af34098351cecc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicSounds:
+  - soundName: MenuMusic
+    eventRef:
+      Guid:
+        Data1: 1617056042
+        Data2: 1101281581
+        Data3: 1021971883
+        Data4: 550403571
+      Path: event:/music/Menu
+  - soundName: Lvl1Music
+    eventRef:
+      Guid:
+        Data1: 1740623592
+        Data2: 1260628095
+        Data3: 541982651
+        Data4: 2099770359
+      Path: event:/music/Level1
+  - soundName: Lvl2Music
+    eventRef:
+      Guid:
+        Data1: 1502171167
+        Data2: 1205046670
+        Data3: -1482728562
+        Data4: -985815039
+      Path: event:/music/Level2
+  - soundName: Lvl3Music
+    eventRef:
+      Guid:
+        Data1: -15722756
+        Data2: 1173935308
+        Data3: 1137925823
+        Data4: -1838089876
+      Path: event:/music/Level3
+  sfxSounds:
+  - soundName: buttonClick
+    eventRef:
+      Guid:
+        Data1: -382419314
+        Data2: 1115559692
+        Data3: -1638873210
+        Data4: -592795384
+      Path: event:/sfx/ButtonClick
+  - soundName: coinSound
+    eventRef:
+      Guid:
+        Data1: 893863292
+        Data2: 1168241432
+        Data3: -692421192
+        Data4: 547080337
+      Path: event:/sfx/CoinCollected
+  - soundName: potionSound
+    eventRef:
+      Guid:
+        Data1: -77077538
+        Data2: 1186840878
+        Data3: -1124853345
+        Data4: 724459512
+      Path: event:/sfx/PotionCollected
+  - soundName: mapSound
+    eventRef:
+      Guid:
+        Data1: -1237157887
+        Data2: 1161983212
+        Data3: -329872251
+        Data4: -335181462
+      Path: event:/sfx/MapCollected
+  - soundName: keySound
+    eventRef:
+      Guid:
+        Data1: 592713697
+        Data2: 1177005998
+        Data3: -1130222918
+        Data4: 1545265970
+      Path: event:/sfx/KeyCollected
+  - soundName: playerHurt
+    eventRef:
+      Guid:
+        Data1: 708205589
+        Data2: 1282326336
+        Data3: 171220370
+        Data4: 1372285521
+      Path: event:/player/PlayerHurt
+  - soundName: playerJump
+    eventRef:
+      Guid:
+        Data1: -1409467457
+        Data2: 1230280742
+        Data3: 2065692066
+        Data4: 491779433
+      Path: event:/player/PlayerJump
+  - soundName: playerMelee
+    eventRef:
+      Guid:
+        Data1: 953657133
+        Data2: 1209187827
+        Data3: -1336616537
+        Data4: 1491352387
+      Path: event:/player/MeleeAttack
+  - soundName: playerThrow
+    eventRef:
+      Guid:
+        Data1: 1832504757
+        Data2: 1225589627
+        Data3: 384611250
+        Data4: -566993017
+      Path: event:/player/ThrowAttack
+  - soundName: playerDeath
+    eventRef:
+      Guid:
+        Data1: -834297657
+        Data2: 1150276344
+        Data3: -488536680
+        Data4: 1736959766
+      Path: event:/player/PlayerDeath
+  - soundName: crabHurt
+    eventRef:
+      Guid:
+        Data1: 240763405
+        Data2: 1203111387
+        Data3: 410433697
+        Data4: -251118521
+      Path: event:/sfx/enemies/CrabHurt
+  - soundName: crabDeath
+    eventRef:
+      Guid:
+        Data1: -14442692
+        Data2: 1199062582
+        Data3: 1645552785
+        Data4: -980585011
+      Path: event:/sfx/enemies/CrabDeath
+  - soundName: fishHurt
+    eventRef:
+      Guid:
+        Data1: 1617900145
+        Data2: 1177249848
+        Data3: -1759346536
+        Data4: 1266771992
+      Path: event:/sfx/enemies/FishHurt
+  - soundName: fishDeath
+    eventRef:
+      Guid:
+        Data1: 446209039
+        Data2: 1145544981
+        Data3: 829753502
+        Data4: 1771547712
+      Path: event:/sfx/enemies/FishDeath
+  - soundName: starHurt
+    eventRef:
+      Guid:
+        Data1: -561752104
+        Data2: 1260317589
+        Data3: -1302718825
+        Data4: -183732018
+      Path: event:/sfx/enemies/StarHurt
+  - soundName: starDeath
+    eventRef:
+      Guid:
+        Data1: -1846274915
+        Data2: 1294506538
+        Data3: -1210927959
+        Data4: -878060269
+      Path: event:/sfx/enemies/StarDeath
+  - soundName: cannonShoot
+    eventRef:
+      Guid:
+        Data1: 1154908670
+        Data2: 1124307531
+        Data3: 1003332255
+        Data4: -1729006889
+      Path: event:/sfx/enemies/CannonShoot
+  - soundName: seashellShoot
+    eventRef:
+      Guid:
+        Data1: 164933923
+        Data2: 1097103304
+        Data3: 1449445009
+        Data4: -705819928
+      Path: event:/sfx/enemies/SeashellShoot
+--- !u!4 &1137424995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137424993}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.03, y: 0.85, z: -19.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1141425201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82452,6 +82728,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055721}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1250319233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83057,7 +83345,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 21
   m_TargetDisplay: 0
 --- !u!224 &1341154636
 RectTransform:
@@ -85415,6 +85703,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055721}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1565359354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86317,6 +86617,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1341154632}
         m_TargetAssemblyTypeName: EndGameUI, Assembly-CSharp
         m_MethodName: HomeScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1107055721}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -88243,7 +88555,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!224 &2014100720
 RectTransform:
@@ -88487,6 +88799,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1341154632}
         m_TargetAssemblyTypeName: EndGameUI, Assembly-CSharp
         m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1107055721}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -88994,6 +89318,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 488182065759461471, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: m_Name
+      value: crab
+      objectReference: {fileID: 0}
     - target: {fileID: 4512764351655809344, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.71002
@@ -89037,6 +89365,26 @@ PrefabInstance:
     - target: {fileID: 5951869354428257904, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Path
+      value: event:/sfx/PlayerHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data1
+      value: 708205589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data2
+      value: 1282326336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data3
+      value: 171220370
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683998890364598605, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
+      propertyPath: hurtSound.Guid.Data4
+      value: 1372285521
       objectReference: {fileID: 0}
     - target: {fileID: 7843503015778019296, guid: 2c6f0cda21636443e9fb0ce63bcfce13, type: 3}
       propertyPath: m_Name
@@ -89200,6 +89548,7 @@ SceneRoots:
   - {fileID: 1107055719}
   - {fileID: 1859119921}
   - {fileID: 212129899}
+  - {fileID: 1137424995}
   - {fileID: 187755372}
   - {fileID: 505485259}
   - {fileID: 260772770}

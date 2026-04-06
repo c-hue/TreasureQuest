@@ -1,22 +1,22 @@
 using UnityEngine;
+using System;
+using FMODUnity;
+using FMOD.Studio;
+
+[System.Serializable]
+public  class SoundEntry
+{
+    public string soundName;
+    public EventReference eventRef;
+}
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [Header("Music")]
-    [SerializeField] AudioSource musicSource;
-
-    [Header("SFX")]
-    [SerializeField] AudioSource sfxSource;
-
-    [Header("Clips")]
-    [SerializeField] AudioClip jumpSFX;
-    [SerializeField] AudioClip shootSFX;
-    [SerializeField] AudioClip hitSFX;
-    [SerializeField] AudioClip deathSFX;
-    [SerializeField] AudioClip collectSFX;
-
+    [SerializeField] SoundEntry[] musicSounds, sfxSounds;
+    private EventInstance currentMusic;
+    
     void Awake()
     {
         if (Instance != null) { Destroy(gameObject); return; }
@@ -24,11 +24,38 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void PlayJump()  => sfxSource.PlayOneShot(jumpSFX);
-    public void PlayShoot() => sfxSource.PlayOneShot(shootSFX);
-    public void PlayHit()   => sfxSource.PlayOneShot(hitSFX);
-    public void PlayDeath() => sfxSource.PlayOneShot(deathSFX);
-    public void PlayCollect() => sfxSource.PlayOneShot(collectSFX);
+    // --- SFX ------------------------------------------------
+    public void PlayOneShot(string sound, Vector3 worldPos)
+    {
+        SoundEntry s = Array.Find(sfxSounds, x => x.soundName == sound);
+        if (s == null) return;
+        RuntimeManager.PlayOneShot(s.eventRef, worldPos);
+    }
 
-    public void SetMusicVolume(float volume) => musicSource.volume = volume;
+    public void PlayOneShot(string sound)
+    {
+        SoundEntry s = Array.Find(sfxSounds, x => x.soundName == sound);
+        if (s == null) return;
+        RuntimeManager.PlayOneShot(s.eventRef);
+    }
+
+    // --- MUSIC ------------------------------------------------
+    public void PlayMusic(string sound)
+    {
+        SoundEntry s = Array.Find(musicSounds, x => x.soundName == sound);
+        if (s == null) return;
+        
+        StopMusic();
+        currentMusic = RuntimeManager.CreateInstance(s.eventRef);
+        currentMusic.start();
+    }
+
+    public void StopMusic()
+    {
+        if (currentMusic.isValid())
+        {
+            currentMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            currentMusic.release();
+        }
+    }
 }

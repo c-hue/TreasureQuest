@@ -62,10 +62,12 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Max(0, currentHealth);
         UpdateBarUI();
         CameraShake.Instance?.Shake(2f, 0.3f);
+        AudioManager.Instance?.PlayOneShot("playerHurt", this.transform.position);
 
         if (currentHealth <= 0)
         {
             Die();
+            AudioManager.Instance?.PlayOneShot("playerDeath", this.transform.position);
             return;
         }
 

@@ -31,6 +31,7 @@ public class EnemyPatrol : MonoBehaviour
     // ─── Lifecycle ───────────────────────────────────────────────────────
     void Start()
     {
+        string name = this.transform.name;
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
@@ -89,6 +90,9 @@ public class EnemyPatrol : MonoBehaviour
             isHurt = true;
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("hit");
+
+            string hurtSound = name + "Hurt";
+            AudioManager.Instance?.PlayOneShot(hurtSound, this.transform.position);
         } else
         {
             isAlive = false;
@@ -96,6 +100,8 @@ public class EnemyPatrol : MonoBehaviour
             enemyDefeated();
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("die");
+            string deathSound = name + "Death";
+            AudioManager.Instance?.PlayOneShot(deathSound, this.transform.position);
         }
     }
     

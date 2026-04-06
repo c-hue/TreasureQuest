@@ -762,6 +762,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1239945853}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1479383350}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -773,18 +785,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 969657790}
-        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1747322101}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2247,7 +2247,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -2836,76 +2836,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938549913}
   m_CullTransparentMesh: 0
---- !u!1 &969657789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 969657792}
-  - component: {fileID: 969657791}
-  - component: {fileID: 969657790}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &969657790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600b4d022ecc248feba45b04217dcb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
-  buttonClick:
-    Guid:
-      Data1: -382419314
-      Data2: 1115559692
-      Data3: -1638873210
-      Data4: -592795384
-    Path: event:/sfx/ButtonClick
---- !u!114 &969657791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932cb1653309946e2af34098351cecc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  jumpSFX: {fileID: 0}
-  shootSFX: {fileID: 0}
-  hitSFX: {fileID: 0}
-  deathSFX: {fileID: 0}
---- !u!4 &969657792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0319, y: 0.0143, z: 0}
-  m_LocalScale: {x: 0.801583, y: 1.2876477, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993441697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3040,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -3718,19 +3648,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
-        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
-        m_MethodName: PlaySFX
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4369,7 +4287,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4514,7 +4432,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4564,6 +4482,185 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211268981}
   m_CullTransparentMesh: 1
+--- !u!1 &1239945850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239945852}
+  - component: {fileID: 1239945851}
+  - component: {fileID: 1239945853}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1239945851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239945850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932cb1653309946e2af34098351cecc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicSounds:
+  - soundName: MenuMusic
+    eventRef:
+      Guid:
+        Data1: 1617056042
+        Data2: 1101281581
+        Data3: 1021971883
+        Data4: 550403571
+      Path: event:/music/Menu
+  - soundName: Lvl1Music
+    eventRef:
+      Guid:
+        Data1: 1740623592
+        Data2: 1260628095
+        Data3: 541982651
+        Data4: 2099770359
+      Path: event:/music/Level1
+  - soundName: 
+    eventRef:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  sfxSounds:
+  - soundName: buttonClick
+    eventRef:
+      Guid:
+        Data1: -382419314
+        Data2: 1115559692
+        Data3: -1638873210
+        Data4: -592795384
+      Path: event:/sfx/ButtonClick
+  - soundName: coinSound
+    eventRef:
+      Guid:
+        Data1: 893863292
+        Data2: 1168241432
+        Data3: -692421192
+        Data4: 547080337
+      Path: event:/sfx/CoinCollected
+  - soundName: potionSound
+    eventRef:
+      Guid:
+        Data1: -77077538
+        Data2: 1186840878
+        Data3: -1124853345
+        Data4: 724459512
+      Path: event:/sfx/PotionCollected
+  - soundName: mapSound
+    eventRef:
+      Guid:
+        Data1: -1237157887
+        Data2: 1161983212
+        Data3: -329872251
+        Data4: -335181462
+      Path: event:/sfx/MapCollected
+  - soundName: keySound
+    eventRef:
+      Guid:
+        Data1: 592713697
+        Data2: 1177005998
+        Data3: -1130222918
+        Data4: 1545265970
+      Path: event:/sfx/KeyCollected
+  - soundName: playerHurt
+    eventRef:
+      Guid:
+        Data1: 708205589
+        Data2: 1282326336
+        Data3: 171220370
+        Data4: 1372285521
+      Path: event:/player/PlayerHurt
+  - soundName: playerJump
+    eventRef:
+      Guid:
+        Data1: -1409467457
+        Data2: 1230280742
+        Data3: 2065692066
+        Data4: 491779433
+      Path: event:/player/PlayerJump
+  - soundName: playerMelee
+    eventRef:
+      Guid:
+        Data1: 953657133
+        Data2: 1209187827
+        Data3: -1336616537
+        Data4: 1491352387
+      Path: event:/player/MeleeAttack
+  - soundName: playerThrow
+    eventRef:
+      Guid:
+        Data1: 1832504757
+        Data2: 1225589627
+        Data3: 384611250
+        Data4: -566993017
+      Path: event:/player/ThrowAttack
+  - soundName: playerDeath
+    eventRef:
+      Guid:
+        Data1: -834297657
+        Data2: 1150276344
+        Data3: -488536680
+        Data4: 1736959766
+      Path: event:/player/PlayerDeath
+  - soundName: crabHurt
+    eventRef:
+      Guid:
+        Data1: 240763405
+        Data2: 1203111387
+        Data3: 410433697
+        Data4: -251118521
+      Path: event:/sfx/enemies/CrabHurt
+  - soundName: crabDeath
+    eventRef:
+      Guid:
+        Data1: -14442692
+        Data2: 1199062582
+        Data3: 1645552785
+        Data4: -980585011
+      Path: event:/sfx/enemies/CrabDeath
+--- !u!4 &1239945852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239945850}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.03, y: 0.85, z: -19.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239945853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239945850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600b4d022ecc248feba45b04217dcb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!1 &1247088601
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,7 +4942,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -6340,7 +6437,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -6753,7 +6850,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -6995,7 +7092,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1747322101}
+      - m_Target: {fileID: 729097567}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7007,7 +7104,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -7261,7 +7358,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 1239945853}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -7317,7 +7414,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 127661756}
   - {fileID: 590152710}
-  - {fileID: 969657792}
+  - {fileID: 1239945852}
   - {fileID: 1479383354}
   - {fileID: 1747322105}
   - {fileID: 729097571}

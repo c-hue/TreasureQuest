@@ -25119,6 +25119,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055720}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &187755370
 GameObject:
   m_ObjectHideFlags: 0
@@ -53767,7 +53779,7 @@ GameObject:
   - component: {fileID: 550271959}
   - component: {fileID: 550271958}
   m_Layer: 6
-  m_Name: Seashell
+  m_Name: seashell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58096,6 +58108,7 @@ GameObject:
   - component: {fileID: 1107055717}
   - component: {fileID: 1107055716}
   - component: {fileID: 1107055715}
+  - component: {fileID: 1107055720}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -58247,12 +58260,24 @@ Transform:
   m_GameObject: {fileID: 1107055714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27798706, y: 0.84997, z: -19.95}
+  m_LocalPosition: {x: 0.2841711, y: 0.84998995, z: -19.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107055720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107055714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600b4d022ecc248feba45b04217dcb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
 --- !u!4 &1107577636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 270209530512147431, guid: 96ca04422f8f8477dba396212bca9ec3, type: 3}
@@ -58765,6 +58790,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 9106852098551477823, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
+      propertyPath: m_Name
+      value: star
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58930,7 +58959,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!224 &1186978654
 RectTransform:
@@ -59451,7 +59480,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 21
   m_TargetDisplay: 0
 --- !u!224 &1272239543
 RectTransform:
@@ -69219,6 +69248,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055720}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1845735384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71126,6 +71167,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055720}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125013393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71622,6 +71675,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1107055720}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145693229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71720,6 +71785,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 9106852098551477823, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
+      propertyPath: m_Name
+      value: star
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71733,6 +71802,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1783874983262702941, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
+      propertyPath: m_Name
+      value: star
+      objectReference: {fileID: 0}
     - target: {fileID: 2772358521222655127, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.4

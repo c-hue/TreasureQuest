@@ -109,6 +109,8 @@ public class EnemyJump : MonoBehaviour
             isHurt = true;
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("hit");
+            string hurtSound = name + "Hurt";
+            AudioManager.Instance?.PlayOneShot(hurtSound, this.transform.position);
         } else
         {
             isAlive = false;
@@ -116,6 +118,8 @@ public class EnemyJump : MonoBehaviour
             enemyDefeated();
             rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("die");
+            string deathSound = name + "Death";
+            AudioManager.Instance?.PlayOneShot(deathSound, this.transform.position);
         }
     }
 

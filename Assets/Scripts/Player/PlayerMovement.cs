@@ -133,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) && (isGrounded || isOnHazard))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            AudioManager.Instance?.PlayOneShot("playerJump", this.transform.position);
         }
     }
 

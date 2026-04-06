@@ -33,17 +33,20 @@ public class Collectible : MonoBehaviour
             {
                 GameSession.Instance?.AddMap();
                 GameSession.Instance?.AddScore(250);
+                AudioManager.Instance?.PlayOneShot("mapSound", this.transform.position);
             } 
 
             if (name == "Key")
             {
                 GameSession.Instance?.KeyFound();
+                AudioManager.Instance?.PlayOneShot("keySound", this.transform.position);
             }
 
             if (tag == "Coin")
             {
                 GameSession.Instance?.MarkCollected(ID);
                 GameSession.Instance?.AddScore(pointValue);
+                AudioManager.Instance?.PlayOneShot("coinSound", this.transform.position);
             }
 
             if (tag == "Potion")
@@ -58,9 +61,9 @@ public class Collectible : MonoBehaviour
                     GameSession.Instance?.AddLife();
                 else
                     GameSession.Instance?.AddScore(pointValue);
+                AudioManager.Instance?.PlayOneShot("potionSound", this.transform.position);
             }        
             
-            AudioManager.Instance?.PlayCollect();
             animator.SetTrigger("Collect");
             if (collectEffect != null)
                 Instantiate(collectEffect, transform.position, Quaternion.identity);

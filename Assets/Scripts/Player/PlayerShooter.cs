@@ -48,6 +48,7 @@ public class PlayerShooter : MonoBehaviour
     // -- Player attacks -------------------------------------
     public void meleeAttack()
     {
+        AudioManager.Instance?.PlayOneShot("playerMelee", this.transform.position);
         // Determine direction based on which way the player is facing
         float direction = spriteRenderer.flipX ? -1f : 1f;
 
@@ -73,6 +74,7 @@ public class PlayerShooter : MonoBehaviour
     }
     public void throwSword()
     {
+        AudioManager.Instance?.PlayOneShot("playerThrow", this.transform.position);
         // Determine direction based on which way the player is facing
         float direction = spriteRenderer.flipX ? -1f : 1f;
 

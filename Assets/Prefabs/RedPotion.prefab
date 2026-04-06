@@ -106,6 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b1ee912f4a4489c808bb634febbce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  collectSound:
+    Guid:
+      Data1: -77077538
+      Data2: 1186840878
+      Data3: -1124853345
+      Data4: 724459512
+    Path: event:/sfx/PotionCollected
   pointValue: 250
   collectEffect: {fileID: 0}
 --- !u!95 &7432458727267247815

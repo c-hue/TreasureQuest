@@ -62,8 +62,10 @@ public class PauseGameUI : MonoBehaviour
         Time.timeScale = 0f;
         string score = GameSession.Instance?.GetScore().ToString();
         scoreText.text = "Score: "+ score;
+
         resumeButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
+        AudioManager.Instance?.PlayOneShot("loseMusic");
     }
 
     public void ShowWin()
@@ -82,6 +84,7 @@ public class PauseGameUI : MonoBehaviour
 
         resumeButton.gameObject.SetActive(false);
         playButton.gameObject.SetActive(true);
+        AudioManager.Instance?.PlayOneShot("winMusic");
     }
 
     public void ShowPause()

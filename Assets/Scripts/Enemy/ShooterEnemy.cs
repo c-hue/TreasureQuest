@@ -17,6 +17,7 @@ public class ShooterEnemy : MonoBehaviour
 
     void Start()
     {
+        string name = this.transform.name;
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
     }
@@ -48,6 +49,8 @@ public class ShooterEnemy : MonoBehaviour
 
     public void SpawnProjectile()
     {
+        string shootSound = name + "Shoot";
+        AudioManager.Instance?.PlayOneShot(shootSound, this.transform.position);
         Instantiate(projectile, projectilePos.position, Quaternion.identity);
     }
 }
