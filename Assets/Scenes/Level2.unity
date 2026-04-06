@@ -53821,8 +53821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShooterEnemy
   projectile: {fileID: 6861172169538906040, guid: 8525084ebd4cf494b8655566863dd709, type: 3}
   projectilePos: {fileID: 815494650}
-  shootInterval: 3
-  detectionRange: 30
+  shootInterval: 2
+  detectionRange: 25
 --- !u!70 &550271960
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

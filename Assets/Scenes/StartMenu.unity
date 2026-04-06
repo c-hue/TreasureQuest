@@ -774,7 +774,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -1897,6 +1897,319 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695064834}
   m_CullTransparentMesh: 1
+--- !u!1 &704763190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704763192}
+  - component: {fileID: 704763191}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &704763191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704763190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932cb1653309946e2af34098351cecc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicSounds:
+  - soundName: MenuMusic
+    eventRef:
+      Guid:
+        Data1: 1617056042
+        Data2: 1101281581
+        Data3: 1021971883
+        Data4: 550403571
+      Path: event:/music/Menu
+  - soundName: Lvl1Music
+    eventRef:
+      Guid:
+        Data1: 1740623592
+        Data2: 1260628095
+        Data3: 541982651
+        Data4: 2099770359
+      Path: event:/music/Level1
+  - soundName: Lvl2Music
+    eventRef:
+      Guid:
+        Data1: 1502171167
+        Data2: 1205046670
+        Data3: -1482728562
+        Data4: -985815039
+      Path: event:/music/Level2
+  - soundName: Lvl3Music
+    eventRef:
+      Guid:
+        Data1: -15722756
+        Data2: 1173935308
+        Data3: 1137925823
+        Data4: -1838089876
+      Path: event:/music/Level3
+  voiceLines:
+  - soundName: Lvl1Start
+    eventRef:
+      Guid:
+        Data1: -596703425
+        Data2: 1239985880
+        Data3: 118201236
+        Data4: -520142442
+      Path: event:/dialogue/Lvl1Start
+  - soundName: Lvl1Pause
+    eventRef:
+      Guid:
+        Data1: -1420152188
+        Data2: 1335986555
+        Data3: -1548624205
+        Data4: 1663069277
+      Path: event:/dialogue/Lvl1Pause
+  - soundName: Lvl1End
+    eventRef:
+      Guid:
+        Data1: 360511218
+        Data2: 1189805764
+        Data3: -302201444
+        Data4: 290718404
+      Path: event:/dialogue/Lvl1End
+  - soundName: Lvl2Start
+    eventRef:
+      Guid:
+        Data1: 252530129
+        Data2: 1170137637
+        Data3: 494164114
+        Data4: 753232668
+      Path: event:/dialogue/Lvl2Start
+  - soundName: Lvl2Pause
+    eventRef:
+      Guid:
+        Data1: 2058205176
+        Data2: 1328630099
+        Data3: -316726379
+        Data4: 1961586652
+      Path: event:/dialogue/Lvl2Pause
+  - soundName: Lvl2End
+    eventRef:
+      Guid:
+        Data1: -193099377
+        Data2: 1320557562
+        Data3: -1912380005
+        Data4: -1294771508
+      Path: event:/dialogue/Lvl2End
+  - soundName: Lvl3Start
+    eventRef:
+      Guid:
+        Data1: -2072990561
+        Data2: 1301257889
+        Data3: -1943215686
+        Data4: 1745849044
+      Path: event:/dialogue/Lvl3Start
+  - soundName: Lvl3Pause
+    eventRef:
+      Guid:
+        Data1: -186426305
+        Data2: 1119822920
+        Data3: -2077451084
+        Data4: -813105988
+      Path: event:/dialogue/Lvl3Pause
+  - soundName: Lvl3End
+    eventRef:
+      Guid:
+        Data1: 934942362
+        Data2: 1112067985
+        Data3: 445553029
+        Data4: 1905260793
+      Path: event:/dialogue/Lvl3End
+  sfxSounds:
+  - soundName: buttonClick
+    eventRef:
+      Guid:
+        Data1: -382419314
+        Data2: 1115559692
+        Data3: -1638873210
+        Data4: -592795384
+      Path: event:/sfx/ButtonClick
+  - soundName: coinSound
+    eventRef:
+      Guid:
+        Data1: 893863292
+        Data2: 1168241432
+        Data3: -692421192
+        Data4: 547080337
+      Path: event:/sfx/collectibles/CoinCollected
+  - soundName: potionSound
+    eventRef:
+      Guid:
+        Data1: -77077538
+        Data2: 1186840878
+        Data3: -1124853345
+        Data4: 724459512
+      Path: event:/sfx/collectibles/PotionCollected
+  - soundName: mapSound
+    eventRef:
+      Guid:
+        Data1: -1237157887
+        Data2: 1161983212
+        Data3: -329872251
+        Data4: -335181462
+      Path: event:/sfx/collectibles/MapCollected
+  - soundName: keySound
+    eventRef:
+      Guid:
+        Data1: 592713697
+        Data2: 1177005998
+        Data3: -1130222918
+        Data4: 1545265970
+      Path: event:/sfx/collectibles/KeyCollected
+  - soundName: playerHurt
+    eventRef:
+      Guid:
+        Data1: 708205589
+        Data2: 1282326336
+        Data3: 171220370
+        Data4: 1372285521
+      Path: event:/sfx/player/PlayerHurt
+  - soundName: playerJump
+    eventRef:
+      Guid:
+        Data1: -1409467457
+        Data2: 1230280742
+        Data3: 2065692066
+        Data4: 491779433
+      Path: event:/sfx/player/PlayerJump
+  - soundName: playerMelee
+    eventRef:
+      Guid:
+        Data1: 953657133
+        Data2: 1209187827
+        Data3: -1336616537
+        Data4: 1491352387
+      Path: event:/sfx/player/MeleeAttack
+  - soundName: playerThrow
+    eventRef:
+      Guid:
+        Data1: 1832504757
+        Data2: 1225589627
+        Data3: 384611250
+        Data4: -566993017
+      Path: event:/sfx/player/ThrowAttack
+  - soundName: playerDeath
+    eventRef:
+      Guid:
+        Data1: -834297657
+        Data2: 1150276344
+        Data3: -488536680
+        Data4: 1736959766
+      Path: event:/sfx/player/PlayerDeath
+  - soundName: crabHurt
+    eventRef:
+      Guid:
+        Data1: 240763405
+        Data2: 1203111387
+        Data3: 410433697
+        Data4: -251118521
+      Path: event:/sfx/enemies/CrabHurt
+  - soundName: crabDeath
+    eventRef:
+      Guid:
+        Data1: -14442692
+        Data2: 1199062582
+        Data3: 1645552785
+        Data4: -980585011
+      Path: event:/sfx/enemies/CrabDeath
+  - soundName: fishHurt
+    eventRef:
+      Guid:
+        Data1: 1617900145
+        Data2: 1177249848
+        Data3: -1759346536
+        Data4: 1266771992
+      Path: event:/sfx/enemies/FishHurt
+  - soundName: fishDeath
+    eventRef:
+      Guid:
+        Data1: 446209039
+        Data2: 1145544981
+        Data3: 829753502
+        Data4: 1771547712
+      Path: event:/sfx/enemies/FishDeath
+  - soundName: starHurt
+    eventRef:
+      Guid:
+        Data1: -561752104
+        Data2: 1260317589
+        Data3: -1302718825
+        Data4: -183732018
+      Path: event:/sfx/enemies/StarHurt
+  - soundName: starDeath
+    eventRef:
+      Guid:
+        Data1: -1846274915
+        Data2: 1294506538
+        Data3: -1210927959
+        Data4: -878060269
+      Path: event:/sfx/enemies/StarDeath
+  - soundName: cannonShoot
+    eventRef:
+      Guid:
+        Data1: 1154908670
+        Data2: 1124307531
+        Data3: 1003332255
+        Data4: -1729006889
+      Path: event:/sfx/enemies/CannonShoot
+  - soundName: seashellShoot
+    eventRef:
+      Guid:
+        Data1: 164933923
+        Data2: 1097103304
+        Data3: 1449445009
+        Data4: -705819928
+      Path: event:/sfx/enemies/SeashellShoot
+  - soundName: winMusic
+    eventRef:
+      Guid:
+        Data1: 835176041
+        Data2: 1084315986
+        Data3: -615705166
+        Data4: 11084491
+      Path: event:/sfx/Win
+  - soundName: loseMusic
+    eventRef:
+      Guid:
+        Data1: 2073558224
+        Data2: 1131564717
+        Data3: 1228981921
+        Data4: 1424642523
+      Path: event:/sfx/Lose
+  normalVolume: 1
+  dialogueVolume: 0.35
+--- !u!4 &704763192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704763190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.03, y: 0.85, z: -19.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721676631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2560,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -2836,76 +3149,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938549913}
   m_CullTransparentMesh: 0
---- !u!1 &969657789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 969657792}
-  - component: {fileID: 969657791}
-  - component: {fileID: 969657790}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &969657790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600b4d022ecc248feba45b04217dcb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
-  buttonClick:
-    Guid:
-      Data1: -382419314
-      Data2: 1115559692
-      Data3: -1638873210
-      Data4: -592795384
-    Path: event:/sfx/ButtonClick
---- !u!114 &969657791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932cb1653309946e2af34098351cecc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  jumpSFX: {fileID: 0}
-  shootSFX: {fileID: 0}
-  hitSFX: {fileID: 0}
-  deathSFX: {fileID: 0}
---- !u!4 &969657792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969657789}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0319, y: 0.0143, z: 0}
-  m_LocalScale: {x: 0.801583, y: 1.2876477, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993441697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3353,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -3718,7 +3961,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -3730,7 +3973,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4369,7 +4612,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4514,7 +4757,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -4845,7 +5088,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -6340,7 +6583,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -6753,7 +6996,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -7007,7 +7250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -7261,7 +7504,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 969657790}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 1
@@ -7317,7 +7560,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 127661756}
   - {fileID: 590152710}
-  - {fileID: 969657792}
+  - {fileID: 704763192}
   - {fileID: 1479383354}
   - {fileID: 1747322105}
   - {fileID: 729097571}
