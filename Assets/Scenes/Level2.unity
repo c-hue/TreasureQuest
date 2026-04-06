@@ -58260,7 +58260,7 @@ Transform:
   m_GameObject: {fileID: 1107055714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2841711, y: 0.84998995, z: -19.95}
+  m_LocalPosition: {x: 0.33418846, y: 0.8999901, z: -19.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58795,7 +58795,8 @@ PrefabInstance:
       value: star
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 444045629259677924, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
@@ -59237,7 +59238,7 @@ Transform:
   m_GameObject: {fileID: 1244718038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: 0.85, z: -19.95}
+  m_LocalPosition: {x: 0.34, y: 0.9, z: -19.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70224,7 +70225,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   attackRate: 0.5
-  attackRange: 1.6
+  attackRange: 1.8
   arrowPrefab: {fileID: 6610520068241679059, guid: 07df8e7974ac74fa5abff3fdb05c90f8, type: 3}
   firePoint: {fileID: 2045041059}
   fireRate: 0.8
@@ -70410,7 +70411,7 @@ Transform:
   m_GameObject: {fileID: 2040362279}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.29, y: -0.15, z: 0}
+  m_LocalPosition: {x: 0.34, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70445,7 +70446,7 @@ Transform:
   m_GameObject: {fileID: 2045041058}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87, y: -0.47, z: 0}
+  m_LocalPosition: {x: 0.54, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71790,7 +71791,8 @@ PrefabInstance:
       value: star
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 444045629259677924, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae86f6d4a5994c3ea6e8f8d676b69ef, type: 3}
@@ -71849,6 +71851,14 @@ PrefabInstance:
     - target: {fileID: 4953378370120091015, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197478084981162358, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
+      propertyPath: kickX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197478084981162358, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
+      propertyPath: kickY
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8171939905399737867, guid: 01f46c0097de5421492fcfd1ad275829, type: 3}
       propertyPath: m_Name

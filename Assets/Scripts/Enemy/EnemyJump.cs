@@ -6,8 +6,7 @@ public class EnemyJump : MonoBehaviour
 {
     // ─── Settings ────────────────────────────────────────────────────────
     [Header("Patrol")]
-    [SerializeField] float moveSpeed = 6f;
-    [SerializeField] Transform topEdge;
+    [SerializeField] float jumpForce = 30f;
     [SerializeField] Transform bottomEdge;  
 
     // ─── State ───────────────────────────────────────────────────────────
@@ -15,11 +14,8 @@ public class EnemyJump : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
     int enemyHealth = 3;
-    bool movingUp = true;
     bool isAlive = true;
     bool isHurt = false;
-    float hitDirection;
-    bool isFalling = false;
     bool isWaiting = false;
     GameObject enemyTracker;
 
@@ -29,53 +25,47 @@ public class EnemyJump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        animator.SetBool("isJumping", movingUp);
         enemyTracker = GameObject.Find("EnemyCounter");
+
+        animator.SetBool("isWaiting", true);
+        animator.SetBool("isJumping", false);
     }
 
     void Update()
     {
         if (!isAlive || isHurt) return;
         CheckEdges();
+        UpdateAnimations();
     }
 
-    void FixedUpdate()
+    void UpdateAnimations()
     {
-        if (!isAlive || isHurt) return;
-        Patrol();
-    }
-
-    // ─── Patrol Logic ────────────────────────────────────────────────────
-    void Patrol()
-    {
-        float direction = movingUp ? 1f : -1f;
-        if (movingUp)
+        if (isWaiting)
         {
-            rb.linearVelocity = new Vector2(0, direction * moveSpeed);    
+            animator.SetBool("isWaiting", isWaiting);
+            animator.SetBool("isJumping", false);
+            return;
+        }
+        animator.SetBool("isWaiting", isWaiting);
 
-        } else
+        if (rb.linearVelocity.y > 0.1f)
         {
-            rb.linearVelocity = new Vector2(0, direction * 5f);    
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 
+    // ─── Jump Logic ────────────────────────────────────────────────────
     void CheckEdges()
     {
-        // Turn around at patrol waypoints
-        if (movingUp && transform.position.y >= topEdge.position.y)
-        {
-            reachedTop();
-        }
-        else if (!movingUp && transform.position.y <= bottomEdge.position.y)
+        // When enemy comes back down to bottom
+        if (!isWaiting && rb.linearVelocity.y <= 0 && transform.position.y <= bottomEdge.position.y)
         {
             reachedBottom();
         }
-    }
-
-    void reachedTop()
-    {
-        movingUp = !movingUp;
-        animator.SetBool("isJumping", movingUp);
     }
 
     void reachedBottom()
@@ -85,16 +75,17 @@ public class EnemyJump : MonoBehaviour
         isWaiting = true;
         rb.linearVelocity = Vector2.zero;
         animator.SetBool("isWaiting", isWaiting);
+        animator.SetBool("isJumping", false);
         StartCoroutine(WaitingTimer());
     }
 
     IEnumerator WaitingTimer()
     {
-        yield return new WaitForSeconds(3f);
-        movingUp = true;
+        yield return new WaitForSeconds(2f);
         isWaiting = false;
         animator.SetBool("isWaiting", isWaiting);
-        animator.SetBool("isJumping", movingUp);
+
+        rb.linearVelocity = new Vector2(0f, jumpForce);
     }
 
     // ─── Death ───────────────────────────────────────────────────────────
@@ -107,8 +98,8 @@ public class EnemyJump : MonoBehaviour
         {
             enemyHealth--;
             isHurt = true;
-            rb.linearVelocity = Vector2.zero;
             animator.SetTrigger("hit");
+            rb.linearVelocity = Vector2.zero;
             string hurtSound = name + "Hurt";
             AudioManager.Instance?.PlayOneShot(hurtSound, this.transform.position);
         } else
@@ -126,6 +117,7 @@ public class EnemyJump : MonoBehaviour
     public void EndHit()
     {
         isHurt = false;
+        UpdateAnimations();
     }
 
     void enemyDefeated()

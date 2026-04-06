@@ -22,11 +22,11 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -6993014915785362203, guid: f361a0ebb9eb843e3bd87819bc351f81, type: 3}
-    - time: 0.11666667
+    - time: 0.1
       value: {fileID: 671407477935294012, guid: 1448a184cf3d2460595164b1aa0db97b, type: 3}
-    - time: 0.21666667
+    - time: 0.2
       value: {fileID: 1477930297850264390, guid: cea038d61b8724165ba7b5973851511e, type: 3}
-    - time: 0.33333334
+    - time: 0.31666666
       value: {fileID: -4015880646665168236, guid: ff904311d31794d6c8ce4f65f6a030aa, type: 3}
     attribute: m_Sprite
     path: 
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.41666666
+    m_StopTime: 0.38333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,14 +79,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.033333335
+  - time: 0.016666668
     functionName: ApplyKnockback
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.38333333
     functionName: EndHit
     data: 
     objectReferenceParameter: {fileID: 0}
