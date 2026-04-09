@@ -124,7 +124,6 @@
 | ✅ | ☐ | At least **2 enemies** placed in the level |
 
 **Section Notes:** _______________________________________________
-Working to add two enemies that jump in levels 2 and 3
 ---
 
 ## 🏹 Section 8 — Shooting System
@@ -181,11 +180,11 @@ Instead of hearts, we did a health bar
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Background music loops on AudioSource |
-| ☐ | ☐ | Jump SFX plays when player jumps |
-| ☐ | ☐ | Shoot SFX plays when player fires |
-| ☐ | ☐ | Damage SFX plays when player is hit |
-| ☐ | ☐ | At least 1 particle effect (death, hit, collect, etc.) |
+| ✅ | ☐ | Background music loops on AudioSource |
+| ✅ | ☐ | Jump SFX plays when player jumps |
+| ✅ | ☐ | Shoot SFX plays when player fires |
+| ✅ | ☐ | Damage SFX plays when player is hit |
+| ✅ | ☐ | At least 1 particle effect (death, hit, collect, etc.) |
 
 **Section Notes:** _______________________________________________
 
@@ -220,18 +219,18 @@ Instead of hearts, we did a health bar
 | ✅ | Difficulty | Feature |
 |:---:|:---:|---|
 | ☐ | 🟢 | Double jump |
-| ☐ | 🟢 | Animated collectible coins/gems |
+| ✅ | 🟢 | Animated collectible coins/gems |
 | ☐ | 🟢 | Multiple enemy types (reskins with different speeds) |
 | ☐ | 🟡 | Checkpoint system |
 | ☐ | 🟡 | Moving platform |
-| ☐ | 🟡 | Enemy with ranged attack |
-| ☐ | 🟡 | Score system with on-screen display |
+| ✅ | 🟡 | Enemy with ranged attack |
+| ✅ | 🟡 | Score system with on-screen display |
 | ☐ | 🔴 | Boss enemy with health bar |
-| ☐ | 🔴 | Multiple levels (3+) with scene transitions |
+| ✅ | 🔴 | Multiple levels (3+) with scene transitions |
 | ☐ | 🔴 | Save system (high score persists between sessions) |
 
-**Extension chosen:** Animated collectible coins/gems and score system 
-**Brief description of what you added:** We have not added these yet since we ran out of time, but we are planning to add collectible coins/gems and potions to increase score and heal the player. The score will be visible on the player's screen.
+**Extension chosen:** Animated collectible coins/gems, enemy with ranged attack, score system, multiple levels with scene transitions. 
+**Brief description of what you added:** Collectible coins/gems with idle animation and pickup SFX, hazards that shoot projectiles at player, updating score system UI at bottom right of player screen, 3 levels with scene transitions at beginning and end of scene.
 
 ---
 
