@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{6e7dae9e-8ca6-4976-8073-8d0ab3be8c30}">
+		<property name="assetPath">
+			<value>SFX/Collectibles/PotionCollected.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1040000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2c6e6fb9-cb0a-43e9-8acd-36c935c71499}</destination>
+		</relationship>
+	</object>
+</objects>

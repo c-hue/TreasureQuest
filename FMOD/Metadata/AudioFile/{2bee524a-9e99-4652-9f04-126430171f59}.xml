@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2bee524a-9e99-4652-9f04-126430171f59}">
+		<property name="assetPath">
+			<value>Dialogue/Lvl3End.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>15.438367346938776</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2c6e6fb9-cb0a-43e9-8acd-36c935c71499}</destination>
+		</relationship>
+	</object>
+</objects>

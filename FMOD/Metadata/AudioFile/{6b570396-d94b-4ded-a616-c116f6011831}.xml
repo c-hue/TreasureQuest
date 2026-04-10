@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{6b570396-d94b-4ded-a616-c116f6011831}">
+		<property name="assetPath">
+			<value>SFX/Enemies/StarfishDeath.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8546938775510204</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2c6e6fb9-cb0a-43e9-8acd-36c935c71499}</destination>
+		</relationship>
+	</object>
+</objects>
